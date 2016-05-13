@@ -1,0 +1,149 @@
+body {
+	font-family: Verdana, Arial, sans-serif;
+	margin: 0px auto;
+	padding: 0 0 20px 0;
+	width: 700px;
+}
+
+#page {
+	background: #fff;
+	padding: 20px;
+	font-size: 12pt;
+}
+
+#page td {
+	font-size: 10pt;
+}
+
+#title {
+	padding: 4px;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 15px;
+	height: 16px;
+}
+
+#title .left {
+	float: left;
+	text-align: left;
+}
+
+#footer{
+    height:        16px;     /* Total hight is 20 less border and padding*/
+    padding-top:   3px;
+    padding-left:  5px;
+    padding-right: 5px;
+    color:         #888888;
+    font-size:     0.750em;
+}
+#menu {
+	float: left;
+	width: 150px;
+	padding-right: 20px;
+}
+
+#content {
+	width: 660px;
+}
+
+#content a {
+	color: #c00;
+	text-decoration: none;
+}
+
+#content a:hover {
+	color: #d33;
+	text-decoration: underline;
+}
+
+#content h1 {
+	margin-top: 0px;
+}
+
+fieldset {
+	margin:10px 40px 10px 40px;
+	padding: 8px;
+	border: 1px dotted #333;
+	background:#ddd;
+}
+
+fieldset div {
+	padding: 2px 0px 2px 150px;
+}
+
+fieldset div label {
+	margin-left: -140px;
+	padding-top: 2px;
+	width: 135px;
+	font-weight: bold;
+	position: absolute;
+}
+
+fieldset input {
+	width: 250px;
+}
+
+fieldset input.sm {
+	width: auto;
+}
+
+fieldset textarea {
+	width: 250px;
+}
+
+.rounded_container{
+    /*height: 180px;*/
+    display: block;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 15px;
+    margin: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    font-size: 12pt;
+    -webkit-transition: height .5s;
+}
+
+#column_wrap{
+    float: left;
+    width: 100%;
+}
+#column1{
+    padding: 10px;
+    margin-left: 30px;
+    float: left;
+}
+#column2{
+    padding: 10px;
+    float: right;
+    width: 45%;
+}
+
+.join_button {
+	text-indent:0;
+	font-family:Arial;
+	font-style:normal;
+	text-align:center;
+	margin-left: 280px;
+	margin-bottom: 5px;
+}
+
+.join_button:active {
+	position:relative;
+	top:1px;
+}
+
+.ssid1 {
+	width: 213px;
+}
+
+.sec1 {
+	width: 222px;
+}

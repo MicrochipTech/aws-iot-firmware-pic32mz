@@ -1,0 +1,16 @@
+#### SOFTWARE SECTION ####
+# MPLab files
+software/**/*.X/build
+software/**/*.X/debug
+software/**/*.X/dist
+software/**/*.X/*.log
+software/**/*.X/funclist
+software/**/*.X/*.obj
+software/**/*.X/nbproject/*.properties
+software/**/*.X/nbproject/*.mk
+software/**/*.X/nbproject/*.bash
+software/**/*.X/nbproject/private
+
+#### HARDWARE SECTION ####
+
+#### DOCUMENTS SECTION ####

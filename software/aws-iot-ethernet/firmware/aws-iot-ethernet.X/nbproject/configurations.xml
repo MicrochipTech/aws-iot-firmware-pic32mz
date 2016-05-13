@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f4" displayName="app" projectFiles="true">
+        <logicalFolder name="f1" displayName="system_config" projectFiles="true">
+          <logicalFolder name="f1" displayName="IoT-Ethernet" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="driver" projectFiles="true">
+                <logicalFolder name="f1" displayName="adc" projectFiles="true">
+                  <itemPath>../src/system_config/IoT-Ethernet/framework/driver/adc/drv_adc_static.h</itemPath>
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="cmp" projectFiles="true">
+                  <itemPath>../src/system_config/IoT-Ethernet/framework/driver/cmp/drv_cmp_static.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f2" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
+                  <itemPath>../src/system_config/IoT-Ethernet/framework/net/pres/net_pres_enc_glue.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f3" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
+                  <itemPath>../src/system_config/IoT-Ethernet/framework/system/clk/sys_clk_static.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../src/system_config/IoT-Ethernet/FreeRTOSConfig.h</itemPath>
+            <itemPath>../src/system_config/IoT-Ethernet/config.h</itemPath>
+            <itemPath>../src/system_config/IoT-Ethernet/system_config.h</itemPath>
+            <itemPath>../src/system_config/IoT-Ethernet/system_definitions.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../src/app.h</itemPath>
+        <itemPath>../src/ca-certs.h</itemPath>
+        <itemPath>../src/app_nvm_support.h</itemPath>
+        <itemPath>../src/bsp_config.h</itemPath>
+        <itemPath>../src/app1.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="crypto" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/ecc.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/arc4.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/pwdbased.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/tfm.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/asn.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/des3.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/rsa.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/aes.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/md5.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/sha.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/sha256.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/sha512.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/hmac.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/hash.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/compress.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/random.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/coding.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/error-crypt.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/integer.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/internal.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/logging.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/memory.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/misc.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/port.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/settings.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/types.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/version.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/visibility.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/crypto.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="driver" projectFiles="true">
+          <logicalFolder name="f1" displayName="ethmac" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethmac/drv_ethmac.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethmac/src/drv_ethmac_local.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethmac/src/dynamic/_eth_dcpt_lists.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethmac/src/dynamic/drv_ethmac_lib.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="ethphy" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethphy/drv_ethphy.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethphy/src/drv_ethphy_local.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethphy/src/dynamic/drv_extphy_regs.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethphy/src/dynamic/drv_extphy_smsc8740.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="nvm" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/nvm/drv_nvm.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="tmr" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/tmr/drv_tmr.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="usb" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/usb/drv_usb.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/driver.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="net" projectFiles="true">
+          <logicalFolder name="f1" displayName="pres" projectFiles="true">
+            <logicalFolder name="f1" displayName="priv" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/net/pres/src/net_pres_local.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/net/pres/net_pres.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/net/pres/net_pres_certstore.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/net/pres/net_pres_encryptionproviderapi.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/net/pres/net_pres_socketapi.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/net/pres/net_pres_transportapi.h</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="system" projectFiles="true">
+          <logicalFolder name="f1" displayName="command" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/command/sys_command.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/common/sys_common.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/common/sys_module.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="console" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/console/src/sys_console_local.h</itemPath>
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/console/src/sys_console_usb_cdc_local.h</itemPath>
+            </logicalFolder>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/console/sys_console.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="debug" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/debug/sys_debug.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="devcon" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/devcon/sys_devcon.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/devcon/src/sys_devcon_cache.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f6" displayName="fs" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/fs/sys_fs.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/fs/sys_fs_media_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/fs/mpfs/mpfs.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f7" displayName="int" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/int/sys_int.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f8" displayName="ports" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/ports/sys_ports.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f9" displayName="random" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/random/sys_random.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f10" displayName="reset" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/reset/sys_reset.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f11" displayName="tmr" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/tmr/sys_tmr.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/system.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f5" displayName="tcpip" projectFiles="true">
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/common/sys_fs_wrapper.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/common/helpers.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/common/lfsr.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f1" displayName="stack" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcp_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcp_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/udp_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/udp_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_heap_alloc.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/arp_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/arp_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/dhcp_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/dhcp_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/dns_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/dns_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/http_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/http_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/nbns_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/sntp_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/zero_conf_helper.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/zero_conf_link_local_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/zero_conf_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_announce_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/hash_fnv.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/link_list.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/oahash.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_helpers_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_manager_control.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_module_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_notify.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_packet.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_private.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_types.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/ipv4_manager.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/ipv4_private.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcp.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/udp.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcpip_heap.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/arp.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tls.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/dhcp.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/dns.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/http.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/nbns.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/sntp.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/zero_conf_link_local.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/zero_conf_multicast_dns.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcpip_helpers.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcpip_manager.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcpip.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcpip_common_ports.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/ipv4.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcpip_mac.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcpip_mac_object.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/tcpip_ethernet.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f6" displayName="usb" projectFiles="true">
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/usb/usb_device.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/usb/usb_cdc.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/usb/usb_device_cdc.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="f1" displayName="portable" projectFiles="true">
+          <logicalFolder name="f1" displayName="MPLAB" projectFiles="true">
+            <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/ISR_Support.h</itemPath>
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/portmacro.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/croutine.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/event_groups.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/projdefs.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/queue.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/StackMacros.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="parson" projectFiles="true">
+        <itemPath>../src/parson.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="third_party" projectFiles="true">
+        <logicalFolder name="f1" displayName="wolfssl" projectFiles="true">
+          <logicalFolder name="f1" displayName="wolfcrypt" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/asn_public.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2-impl.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2-int.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/camellia.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/chacha.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/chacha20_poly1305.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/curve25519.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/dh.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/dsa.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ed25519.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/error-crypt.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/fe_operations.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/fips_test.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ge_operations.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/hc128.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/md2.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/md4.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/mpi_class.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/mpi_superclass.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/pkcs7.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/poly1305.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/rabbit.h</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ripemd.h</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/callbacks.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/certs_test.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/crl.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/error-ssl.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/ocsp.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/options.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/sniffer.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/sniffer_error.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/ssl.h</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfssl/test.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="wolfmqttsdk" displayName="wolfmqttsdk" projectFiles="true">
+        <logicalFolder name="wolfmqtt" displayName="wolfmqtt" projectFiles="true">
+          <itemPath>../src/wolfmqttsdk/wolfmqtt/mqtt_client.h</itemPath>
+          <itemPath>../src/wolfmqttsdk/wolfmqtt/mqtt_packet.h</itemPath>
+          <itemPath>../src/wolfmqttsdk/wolfmqtt/mqtt_socket.h</itemPath>
+          <itemPath>../src/wolfmqttsdk/wolfmqtt/mqtt_types.h</itemPath>
+          <itemPath>../src/wolfmqttsdk/wolfmqtt/version.h</itemPath>
+          <itemPath>../src/wolfmqttsdk/wolfmqtt/visibility.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f4" displayName="app" projectFiles="true">
+        <logicalFolder name="f1" displayName="system_config" projectFiles="true">
+          <logicalFolder name="f1" displayName="IoT-Ethernet" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="driver" projectFiles="true">
+                <logicalFolder name="f1" displayName="adc" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/IoT-Ethernet/framework/driver/adc/src/drv_adc_static.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="cmp" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/IoT-Ethernet/framework/driver/cmp/src/drv_cmp_static.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f2" displayName="net" projectFiles="true">
+                <logicalFolder name="f1" displayName="pres" projectFiles="true">
+                  <itemPath>../src/system_config/IoT-Ethernet/framework/net/pres/net_pres_enc_glue.c</itemPath>
+                  <itemPath>../src/system_config/IoT-Ethernet/framework/net/pres/net_pres_cert_store.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+              <logicalFolder name="f3" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/IoT-Ethernet/framework/system/clk/src/sys_clk_static.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+                <logicalFolder name="f2" displayName="ports" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+                    <itemPath>../src/system_config/IoT-Ethernet/framework/system/ports/src/sys_ports_static.c</itemPath>
+                  </logicalFolder>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../src/system_config/IoT-Ethernet/system_init.c</itemPath>
+            <itemPath>../src/system_config/IoT-Ethernet/system_interrupt.c</itemPath>
+            <itemPath>../src/system_config/IoT-Ethernet/system_exceptions.c</itemPath>
+            <itemPath>../src/system_config/IoT-Ethernet/system_tasks.c</itemPath>
+            <itemPath>../src/system_config/IoT-Ethernet/system_interrupt_a.S</itemPath>
+            <itemPath>../src/system_config/IoT-Ethernet/rtos_hooks.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../src/app.c</itemPath>
+        <itemPath>../src/main.c</itemPath>
+        <itemPath>../src/configuration_http.c</itemPath>
+        <itemPath>../src/app_nvm_support.c</itemPath>
+        <itemPath>../src/http_print.c</itemPath>
+        <itemPath>../src/bsp_sys_init.c</itemPath>
+        <itemPath>../src/mpfs_img2.c</itemPath>
+        <itemPath>../src/app1.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="crypto" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/ecc.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/arc4.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/pwdbased.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/tfm.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/asn.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/des3.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/rsa.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/aes.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/md5.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/sha.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/sha256.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/sha512.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/hmac.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/hash.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/compress.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/random.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/crypto.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/coding.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/error.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/integer.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/logging.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/memory.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/misc.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/crypto/src/port.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="driver" projectFiles="true">
+          <logicalFolder name="f1" displayName="ethmac" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethmac/src/dynamic/drv_ethmac.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethmac/src/dynamic/drv_ethmac_lib.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="ethphy" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethphy/src/dynamic/drv_ethphy.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/ethphy/src/dynamic/drv_extphy_smsc8740.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="nvm" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/nvm/src/dynamic/drv_nvm.c</itemPath>
+                <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/nvm/src/dynamic/drv_nvm_erasewrite.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/tmr/src/dynamic/drv_tmr.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="usb" projectFiles="true">
+            <logicalFolder name="f1" displayName="usbhs" projectFiles="true">
+              <logicalFolder name="f1" displayName="src" projectFiles="true">
+                <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                  <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/usb/usbhs/src/dynamic/drv_usbhs.c</itemPath>
+                  <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/driver/usb/usbhs/src/dynamic/drv_usbhs_device.c</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="net" projectFiles="true">
+          <logicalFolder name="f1" displayName="pres" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/net/pres/src/net_pres.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="osal" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/osal/src/osal_freertos.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f5" displayName="system" projectFiles="true">
+          <logicalFolder name="f1" displayName="command" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/command/src/sys_command.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="console" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/console/src/sys_console.c</itemPath>
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/console/src/sys_console_usb_cdc.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f3" displayName="debug" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/debug/src/sys_debug.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f4" displayName="devcon" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/devcon/src/sys_devcon.c</itemPath>
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/devcon/src/sys_devcon_pic32mz.c</itemPath>
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/devcon/src/sys_devcon_cache_pic32mz.S</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f5" displayName="fs" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/fs/src/dynamic/sys_fs.c</itemPath>
+                <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/fs/src/dynamic/sys_fs_media_manager.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/fs/mpfs/src/mpfs.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f6" displayName="int" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/int/src/sys_int_pic32.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f7" displayName="ports" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/ports/src/sys_ports.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f8" displayName="random" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/random/src/sys_random.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f9" displayName="reset" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/reset/src/sys_reset.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f10" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/system/tmr/src/sys_tmr.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f6" displayName="tcpip" projectFiles="true">
+          <logicalFolder name="f2" displayName="common" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/common/sys_fs_wrapper.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/common/helpers.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/common/lfsr.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f1" displayName="stack" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcp.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/udp.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_heap_alloc.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_heap_internal.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/arp.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/dhcp.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/dns.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/http.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/nbns.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/sntp.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/zero_conf_helper.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/zero_conf_link_local.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/zero_conf_multicast_dns.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_announce.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/hash_fnv.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/oahash.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_helpers.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_helper_c32.S</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_manager.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_notify.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/tcpip_packet.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/tcpip/src/ipv4.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="f7" displayName="usb" projectFiles="true">
+          <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/usb/src/dynamic/usb_device.c</itemPath>
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/usb/src/dynamic/usb_device_cdc.c</itemPath>
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework/usb/src/dynamic/usb_device_cdc_acm.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="f1" displayName="portable" projectFiles="true">
+          <logicalFolder name="f1" displayName="MemMang" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MemMang/heap_2.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="MPLAB" projectFiles="true">
+            <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/port.c</itemPath>
+              <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ/port_asm.S</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/croutine.c</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/list.c</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/queue.c</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/tasks.c</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/timers.c</itemPath>
+        <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/event_groups.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="parson" projectFiles="true">
+        <itemPath>../src/parson.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="third_party" projectFiles="true">
+        <logicalFolder name="f1" displayName="wolfssl" projectFiles="true">
+          <logicalFolder name="f1" displayName="wolfcrypt" projectFiles="true">
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/asm.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/blake2b.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/camellia.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/chacha.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/chacha20_poly1305.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/curve25519.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/dh.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/dsa.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/ecc_fp.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/ed25519.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/fe_low_mem.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/fe_operations.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/ge_low_mem.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/ge_operations.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/hc128.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/md2.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/md4.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/pkcs7.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/poly1305.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/rabbit.c</itemPath>
+            <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/wolfcrypt/src/ripemd.c</itemPath>
+          </logicalFolder>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/src/crl.c</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/src/internal.c</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/src/io.c</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/src/keys.c</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/src/ocsp.c</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/src/sniffer.c</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/src/ssl.c</itemPath>
+          <itemPath>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl/src/tls.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="wolfmqttsdk" displayName="wolfmqttsdk" projectFiles="true">
+        <logicalFolder name="src" displayName="src" projectFiles="true">
+          <itemPath>../src/wolfmqttsdk/src/mqtt_client.c</itemPath>
+          <itemPath>../src/wolfmqttsdk/src/mqtt_packet.c</itemPath>
+          <itemPath>../src/wolfmqttsdk/src/mqtt_socket.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../src</Elem>
+    <Elem>../src/IoT-Ethernet</Elem>
+    <Elem>../src/system_config/IoT-Ethernet</Elem>
+    <Elem>../../../../../microchip/harmony/v1_07_01_ORIGINAL</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="IoT-Ethernet" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC32MZ2048EFM064</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>RealICEPlatformTool</platformTool>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>1.40</languageToolchainVersion>
+        <platform>4</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/bin/framework/peripheral/PIC32MZ2048EFM064_peripherals.a</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <C32>
+        <property key="additional-warnings" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/IoT-Ethernet;../src/system_config/IoT-Ethernet/framework;../src/wolfmqttsdk/;../../../microchip/harmony/v1_07_01_SUBSET;../src/system_config/IoT-Ethernet;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value="HAVE_CONFIG_H"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32>
+      <C32-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C32-AR>
+      <C32-AS>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor"
+                  value="../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include;../src/system_config/IoT-Ethernet;"/>
+      </C32-AS>
+      <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="exclude-standard-libraries" value="false"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="heap-size" value="262144"/>
+        <property key="input-libraries" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+        <property key="no-startup-files" value="false"/>
+        <property key="oXC32ld-extra-opts" value=""/>
+        <property key="optimization-level" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="true"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+      </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value="-O1"/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
+      <C32Global>
+        <property key="common-include-directories" value=""/>
+        <property key="gp-relative-option" value=""/>
+        <property key="legacy-libc" value="false"/>
+        <property key="relaxed-math" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
+      </C32Global>
+      <ICD3PlatformTool>
+        <property key="ADC" value="true"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="CAN1" value="true"/>
+        <property key="CAN2" value="true"/>
+        <property key="CHANGE NOTICE B" value="true"/>
+        <property key="CHANGE NOTICE C" value="true"/>
+        <property key="CHANGE NOTICE D" value="true"/>
+        <property key="CHANGE NOTICE E" value="true"/>
+        <property key="CHANGE NOTICE F" value="true"/>
+        <property key="CHANGE NOTICE G" value="true"/>
+        <property key="COMPARATOR" value="true"/>
+        <property key="DMA" value="true"/>
+        <property key="ETHERNET CONTROLLER" value="true"/>
+        <property key="Freeze All Other Peripherals" value="true"/>
+        <property key="I2C 1" value="true"/>
+        <property key="I2C 3" value="true"/>
+        <property key="I2C 4" value="true"/>
+        <property key="I2C 5" value="true"/>
+        <property key="INPUT CAPTURE 1" value="true"/>
+        <property key="INPUT CAPTURE 2" value="true"/>
+        <property key="INPUT CAPTURE 3" value="true"/>
+        <property key="INPUT CAPTURE 4" value="true"/>
+        <property key="INPUT CAPTURE 5" value="true"/>
+        <property key="INPUT CAPTURE 6" value="true"/>
+        <property key="INPUT CAPTURE 7" value="true"/>
+        <property key="INPUT CAPTURE 8" value="true"/>
+        <property key="INPUT CAPTURE 9" value="true"/>
+        <property key="INTERRUPT CONTROL" value="true"/>
+        <property key="OUTPUT COMPARE 1" value="true"/>
+        <property key="OUTPUT COMPARE 2" value="true"/>
+        <property key="OUTPUT COMPARE 3" value="true"/>
+        <property key="OUTPUT COMPARE 4" value="true"/>
+        <property key="OUTPUT COMPARE 5" value="true"/>
+        <property key="OUTPUT COMPARE 6" value="true"/>
+        <property key="OUTPUT COMPARE 7" value="true"/>
+        <property key="OUTPUT COMPARE 8" value="true"/>
+        <property key="OUTPUT COMPARE 9" value="true"/>
+        <property key="PARALLEL MASTER/SLAVE PORT" value="true"/>
+        <property key="REAL TIME CLOCK" value="true"/>
+        <property key="REFERENCE CLOCK1" value="true"/>
+        <property key="REFERENCE CLOCK2" value="true"/>
+        <property key="REFERENCE CLOCK3" value="true"/>
+        <property key="REFERENCE CLOCK4" value="true"/>
+        <property key="SPI/I2S 1" value="true"/>
+        <property key="SPI/I2S 2" value="true"/>
+        <property key="SPI/I2S 3" value="true"/>
+        <property key="SPI/I2S 4" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="TIMER1" value="true"/>
+        <property key="TIMER2" value="true"/>
+        <property key="TIMER3" value="true"/>
+        <property key="TIMER4" value="true"/>
+        <property key="TIMER5" value="true"/>
+        <property key="TIMER6" value="true"/>
+        <property key="TIMER7" value="true"/>
+        <property key="TIMER8" value="true"/>
+        <property key="TIMER9" value="true"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="UART1" value="true"/>
+        <property key="UART2" value="true"/>
+        <property key="UART3" value="true"/>
+        <property key="UART4" value="true"/>
+        <property key="UART5" value="true"/>
+        <property key="UART6" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="false"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x1d1fffff"/>
+        <property key="memories.programmemory.partition2" value="true"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.start" value="0x1d000000"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x1d1fffff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x1d000000"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="voltagevalue" value="3.25"/>
+      </ICD3PlatformTool>
+      <PICkit3PlatformTool>
+        <property key="ADC 1" value="true"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="CHANGE NOTICE" value="true"/>
+        <property key="COMPARATOR" value="true"/>
+        <property key="CTMU" value="true"/>
+        <property key="DMA" value="true"/>
+        <property key="Freeze All Other Peripherals" value="true"/>
+        <property key="I2C1" value="true"/>
+        <property key="I2C2" value="true"/>
+        <property key="INPUT CAPTURE 1" value="true"/>
+        <property key="INPUT CAPTURE 2" value="true"/>
+        <property key="INPUT CAPTURE 3" value="true"/>
+        <property key="INPUT CAPTURE 4" value="true"/>
+        <property key="INPUT CAPTURE 5" value="true"/>
+        <property key="INTERRUPT CONTROL" value="true"/>
+        <property key="OUTPUT COMPARE 1" value="true"/>
+        <property key="OUTPUT COMPARE 2" value="true"/>
+        <property key="OUTPUT COMPARE 3" value="true"/>
+        <property key="OUTPUT COMPARE 4" value="true"/>
+        <property key="OUTPUT COMPARE 5" value="true"/>
+        <property key="PARALLEL MASTER/SLAVE PORT" value="true"/>
+        <property key="REAL TIME CLOCK" value="true"/>
+        <property key="SPI/I2S 1" value="true"/>
+        <property key="SPI/I2S 2" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="TIMER1" value="true"/>
+        <property key="TIMER2" value="true"/>
+        <property key="TIMER3" value="true"/>
+        <property key="TIMER4" value="true"/>
+        <property key="TIMER5" value="true"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="UART1" value="true"/>
+        <property key="UART2" value="true"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x1d003fff"/>
+        <property key="memories.programmemory.start" value="0x1d000000"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmertogo.imagename" value=""/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.pgmspeed" value="2"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x1d003fff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x1d000000"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VPPFirst"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="voltagevalue" value="3.25"/>
+      </PICkit3PlatformTool>
+      <RealICEPlatformTool>
+        <property key="ADC" value="true"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="CAN1" value="true"/>
+        <property key="CAN2" value="true"/>
+        <property key="CHANGE NOTICE B" value="true"/>
+        <property key="CHANGE NOTICE C" value="true"/>
+        <property key="CHANGE NOTICE D" value="true"/>
+        <property key="CHANGE NOTICE E" value="true"/>
+        <property key="CHANGE NOTICE F" value="true"/>
+        <property key="CHANGE NOTICE G" value="true"/>
+        <property key="COMPARATOR" value="true"/>
+        <property key="DMA" value="true"/>
+        <property key="ETHERNET CONTROLLER" value="true"/>
+        <property key="Freeze All Other Peripherals" value="true"/>
+        <property key="I2C 1" value="true"/>
+        <property key="I2C 3" value="true"/>
+        <property key="I2C 4" value="true"/>
+        <property key="I2C 5" value="true"/>
+        <property key="INPUT CAPTURE 1" value="true"/>
+        <property key="INPUT CAPTURE 2" value="true"/>
+        <property key="INPUT CAPTURE 3" value="true"/>
+        <property key="INPUT CAPTURE 4" value="true"/>
+        <property key="INPUT CAPTURE 5" value="true"/>
+        <property key="INPUT CAPTURE 6" value="true"/>
+        <property key="INPUT CAPTURE 7" value="true"/>
+        <property key="INPUT CAPTURE 8" value="true"/>
+        <property key="INPUT CAPTURE 9" value="true"/>
+        <property key="INTERRUPT CONTROL" value="true"/>
+        <property key="OUTPUT COMPARE 1" value="true"/>
+        <property key="OUTPUT COMPARE 2" value="true"/>
+        <property key="OUTPUT COMPARE 3" value="true"/>
+        <property key="OUTPUT COMPARE 4" value="true"/>
+        <property key="OUTPUT COMPARE 5" value="true"/>
+        <property key="OUTPUT COMPARE 6" value="true"/>
+        <property key="OUTPUT COMPARE 7" value="true"/>
+        <property key="OUTPUT COMPARE 8" value="true"/>
+        <property key="OUTPUT COMPARE 9" value="true"/>
+        <property key="PARALLEL MASTER/SLAVE PORT" value="true"/>
+        <property key="REAL TIME CLOCK" value="true"/>
+        <property key="REFERENCE CLOCK1" value="true"/>
+        <property key="REFERENCE CLOCK2" value="true"/>
+        <property key="REFERENCE CLOCK3" value="true"/>
+        <property key="REFERENCE CLOCK4" value="true"/>
+        <property key="RIExTrigs.Five" value="OFF"/>
+        <property key="RIExTrigs.Four" value="OFF"/>
+        <property key="RIExTrigs.One" value="OFF"/>
+        <property key="RIExTrigs.Seven" value="OFF"/>
+        <property key="RIExTrigs.Six" value="OFF"/>
+        <property key="RIExTrigs.Three" value="OFF"/>
+        <property key="RIExTrigs.Two" value="OFF"/>
+        <property key="RIExTrigs.Zero" value="OFF"/>
+        <property key="SPI/I2S 1" value="true"/>
+        <property key="SPI/I2S 2" value="true"/>
+        <property key="SPI/I2S 3" value="true"/>
+        <property key="SPI/I2S 4" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="TIMER1" value="true"/>
+        <property key="TIMER2" value="true"/>
+        <property key="TIMER3" value="true"/>
+        <property key="TIMER4" value="true"/>
+        <property key="TIMER5" value="true"/>
+        <property key="TIMER6" value="true"/>
+        <property key="TIMER7" value="true"/>
+        <property key="TIMER8" value="true"/>
+        <property key="TIMER9" value="true"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="UART1" value="true"/>
+        <property key="UART2" value="true"/>
+        <property key="UART3" value="true"/>
+        <property key="UART4" value="true"/>
+        <property key="UART5" value="true"/>
+        <property key="UART6" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="hwtoolclock.instructionspeed" value="4"/>
+        <property key="hwtoolclock.units" value="mips"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x1d1fffff"/>
+        <property key="memories.programmemory.partition2" value="true"/>
+        <property key="memories.programmemory.partition2.end"
+                  value="${memories.programmemory.partition2.end.value}"/>
+        <property key="memories.programmemory.partition2.start"
+                  value="${memories.programmemory.partition2.start.value}"/>
+        <property key="memories.programmemory.start" value="0x1d000000"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x1d1fffff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x1d000000"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="tracecontrol.include.timestamp" value="summarydataenabled"/>
+        <property key="tracecontrol.select" value="0"/>
+        <property key="tracecontrol.stallontracebufferfull" value="false"/>
+        <property key="tracecontrol.tracebufmax" value="546000"/>
+        <property key="tracecontrol.tracefile" value="defmplabxtrace.log"/>
+        <property key="tracecontrol.tracefilemax" value="10000000"/>
+        <property key="voltagevalue" value="3.25"/>
+      </RealICEPlatformTool>
+    </conf>
+  </confs>
+</configurationDescriptor>
