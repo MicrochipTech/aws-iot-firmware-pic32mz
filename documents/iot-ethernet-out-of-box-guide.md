@@ -174,10 +174,10 @@ To setup and run the demo follow these instructions:
 - Connect your computer to the same network that the IoT Ethernet Kit is connected
   - Your board will register a Multicast DNS (mDNS) name with the local network that will allow you to access a configuration webpage.
 - Use a bonjour or multicast DNS service to find your board's IP address and enter the IP address into a web browser.  The kit will have a service name such as `xxxxxx_IoT-E` where `xxxxxx` is the last six characters of the kit's MAC address.
-  - Alternatively you can try entering `xxxxxx_iot-e.local` into a web browser to navigate to the webpage where `xxxxxx` is the last six bytes of the MAC address on the board
+  - Alternatively you can try entering `xxxxxx_iot-e.local` into a web browser to navigate to the webpage where `xxxxxx` is the last six characters of the MAC address on the board
 - Once the web browser finds and displays the IoT Ethernet Kit configuration webpage
-  - Enter your AWS IoT Endpoint that you received from the previous AWS IoT Service Setup section.  The endpoint will have the form `<random-string>.iot.us-east-1.amazonaws.com`
-- Copy and paste your client certificate into the box labeled Client Public Cert.
+  - Enter your AWS IoT Endpoint Address that you received from the previous AWS IoT Service Setup section.  The endpoint will have the form `<random-string>.iot.us-east-1.amazonaws.com`
+- Copy and paste your AWS Certificate into the box labeled AWS Certificate.
   -  The cert should look like
 
     ```
@@ -185,7 +185,7 @@ To setup and run the demo follow these instructions:
     <cert data>
     -----END CERTIFICATE-----
     ```
--  Copy and paste your private key into the box labeled Client Private Key.
+-  Copy and paste your AWS Certificate Private Key into the box labeled AWS Certificate Private Key.
   -  The key should look like
 
     ```
@@ -193,7 +193,7 @@ To setup and run the demo follow these instructions:
     <key data>
     -----END RSA PRIVATE KEY-----
     ```
-- Click the __Join__ button and a _Connecting to server_ page will appear showing the endpoint that the IoT Ethernet board will connect to along with the full UUID
+- Click the __Join__ button and a _Connecting to server_ page will appear showing the endpoint that the IoT Ethernet board will connect to along with the AWS Thing Name (MAC Address).
   >  NOTE:  The information you enter above will be sent in the clear and is not secured as if you where using https; this is an option that you can add to your code later
 - You will see a LEDs D1-D6 light up while the board gets initial data from the server.
   - If not, please see the [Status and Error Code Table](Status and Error Code Table) table below for more information
@@ -223,7 +223,7 @@ If you are having trouble connecting with the starter kit, check to make sure th
 - Check that your access point is not blocking MAC addresses.
 
 #### DNS Resolved Failed
-- Check that the AWS Endpoint you configured your starter kit with is correct.
+- Check that the AWS IoT Endpoint Address you configured your starter kit with is correct.
 - Check that you have a valid internet connection on your network
 
 #### Status and Error Code Table

@@ -649,7 +649,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/IoT-Ethernet;../src/system_config/IoT-Ethernet/framework;../src/wolfmqttsdk/;../../../microchip/harmony/v1_07_01_SUBSET;../src/system_config/IoT-Ethernet;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl"/>
+                  value="../src;../src/IoT-Ethernet;../src/system_config/IoT-Ethernet/framework;../src/wolfmqttsdk/;../../../microchip/harmony/v1_07_01_SUBSET;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/framework;../src/system_config/IoT-Ethernet;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/tcpip/wolfssl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -669,7 +669,7 @@
         <property key="additional-options-chop-files" value="false"/>
       </C32-AR>
       <C32-AS>
-        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-assembler" value=";"/>
         <property key="extra-include-directories-for-preprocessor"
                   value="../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_07_01_ORIGINAL/third_party/rtos/FreeRTOS/Source/include;../src/system_config/IoT-Ethernet;"/>
       </C32-AS>

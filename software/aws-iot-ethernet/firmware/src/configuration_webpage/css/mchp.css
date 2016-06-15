@@ -104,9 +104,6 @@ fieldset textarea {
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 5px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     font-size: 12pt;
     -webkit-transition: height .5s;
 }

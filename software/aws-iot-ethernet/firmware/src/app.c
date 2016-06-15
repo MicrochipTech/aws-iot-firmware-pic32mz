@@ -84,6 +84,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 APP_DATA appData;
 extern APP1_DATA app1Data;
 
+#define APP_HARDWARE  "iot_ethernet_dm990004"
+#define APP_FIRMWARE_VERSION "1.1.0"
+
 char topic_awsUpdate[128];
 char topic_awsUpdateDelta[128];
 
@@ -107,7 +110,6 @@ static int mPacketIdLast;
 // WolfMQTT Callbacks for network connectivity
 int APP_tcpipConnect_cb(void *context, const char* host, word16 port, int timeout_ms)
 {
-    
     uint32_t timeout = 0;
     timeout = SYS_TMR_TickCountGet();
     SYS_CONSOLE_PRINT("App:  DNS:   Resolving host '%s'\r\n", &appData.host);
@@ -548,7 +550,7 @@ void APP_Tasks ( void )
             break;
         }    
         
-        // If user presses switch 2 and 3 on powerup, the configuration will be erased
+        // If user presses switch 2 and 3 on power up, the configuration will be erased
         case APP_NVM_ERASE_CONFIGURATION:
         {
             if((BSP_SWITCH_StateGet(BSP_SWITCH_3_CHANNEL, BSP_SWITCH_3_PORT) == BSP_SWITCH_STATE_ASSERTED) 
@@ -558,9 +560,9 @@ void APP_Tasks ( void )
                 APP_NVM_Write(NVM_HOST_ADDRESS_SPACE, appData.host);
                 APP_NVM_Erase(NVM_CLIENT_CERTIFICATE_SPACE);
                 APP_NVM_Erase(NVM_CLIENT_KEY_SPACE);
-                SYS_CONSOLE_MESSAGE("************************************\r\n"
-                                    "App:  Erasing host and certificates!\r\n"
-                                    "************************************\r\n");
+                SYS_CONSOLE_MESSAGE("***************************************\r\n"
+                                    "App:  Erasing configuration!\r\n"
+                                    "***************************************\r\n");
                 appData.state = APP_TCPIP_WAIT_INIT;
                 break;
             }
@@ -571,7 +573,7 @@ void APP_Tasks ( void )
         // Load the configuration stored in NVM on powerup
         case APP_NVM_LOAD_CONFIGURATION:
         {
-            SYS_CONSOLE_MESSAGE("App:  Loading host and certificates from NVM\r\n");
+            SYS_CONSOLE_MESSAGE("App:  Loading AWS IoT Endpoint Address and AWS Certificate/Certificate Private Key\r\n");
             APP_NVM_Read(NVM_HOST_ADDRESS_SPACE, appData.host, sizeof(appData.host));
             APP_NVM_Read(NVM_CLIENT_CERTIFICATE_SPACE, appData.clientCert, sizeof(appData.clientCert));
             APP_NVM_Read(NVM_CLIENT_KEY_SPACE, appData.clientKey, sizeof(appData.clientKey));
@@ -678,7 +680,7 @@ void APP_Tasks ( void )
                         xQueueSendToFront(app1Data.lightShowQueue, &lightShowVal, 1);
                         SYS_CONSOLE_PRINT("App:  Board online.  mDNS online. IP addr %d.%d.%d.%d online.  All systems nominal.\r\n",
                         ipAddr.v[0],ipAddr.v[1],ipAddr.v[2],ipAddr.v[3]);
-                        SYS_CONSOLE_PRINT("App:  MAC Address '%s'\r\n", appData.uuid);
+                        SYS_CONSOLE_PRINT("App:  AWS Thing Name (MAC Address) '%s'\r\n", appData.uuid);
                         SYS_CONSOLE_MESSAGE("App:  Waiting for configuration...\r\n");
                         appData.state = APP_TCPIP_WAIT_CONFIGURATION;
                     }
@@ -710,11 +712,11 @@ void APP_Tasks ( void )
                         SYS_CONSOLE_MESSAGE("App:  Writing configuration to NVM - failed\r\n");
                         while(1);
                     }
-                    SYS_CONSOLE_PRINT("App:  Configured host '%s'\r\n", appData.host);
+                    SYS_CONSOLE_PRINT("App:  Configured AWS IoT Endpoint Address '%s'\r\n", appData.host);
                 } 
                 else if(validConfig)
                 {
-                    SYS_CONSOLE_PRINT("App:  Found configuration - host '%s'\r\n", appData.host);
+                    SYS_CONSOLE_PRINT("App:  Found configuration - AWS IoT Endpoint Address '%s'\r\n", appData.host);
                 }
                 appData.lightShowVal = BSP_LED_INTIAL_CONNECT;
                 xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);  
@@ -851,8 +853,8 @@ void APP_Tasks ( void )
             publish.topic_name = topic_awsUpdate;
             publish.packet_id = mqttclient_get_packetid();
             char publishPayload [MAX_BUFFER_SIZE];
-            sprintf(publishPayload, "{\"state\":{\"reported\":{\"led1\":\"%s\",\"led2\":\"%s\",\"led4\":\"%s\",\"led3\":\"%s\"}}}",
-                    appData.led1val ? "on" : "off", appData.led2val ? "on" : "off", appData.led3val ? "on" : "off", appData.led4val ? "on" : "off");
+            sprintf(publishPayload, "{\"state\":{\"reported\":{\"led1\":\"%s\",\"led2\":\"%s\",\"led4\":\"%s\",\"led3\":\"%s\",\"hardware\":{\"type\":\"%s\",\"firmware_version\":\"%s\"}}}}",
+                    appData.led1val ? "on" : "off", appData.led2val ? "on" : "off", appData.led3val ? "on" : "off", appData.led4val ? "on" : "off", APP_HARDWARE, APP_FIRMWARE_VERSION);
             publish.buffer = (byte *)publishPayload;
             appData.led1val ? BSP_LEDOn(BSP_LED_1_CHANNEL, BSP_LED_1_PORT) : BSP_LEDOff(BSP_LED_1_CHANNEL, BSP_LED_1_PORT); 
             appData.led2val ? BSP_LEDOn(BSP_LED_2_CHANNEL, BSP_LED_2_PORT) : BSP_LEDOff(BSP_LED_2_CHANNEL, BSP_LED_2_PORT);  
