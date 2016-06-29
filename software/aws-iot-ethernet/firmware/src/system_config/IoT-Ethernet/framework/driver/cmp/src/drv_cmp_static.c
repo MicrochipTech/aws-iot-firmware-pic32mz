@@ -50,8 +50,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Header Includes
 // *****************************************************************************
 // *****************************************************************************
-#include "peripheral/cmp/plib_cmp.h"
-#include "peripheral/int/plib_int.h"
+#include "framework/driver/cmp/drv_cmp_static.h"
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -92,9 +92,9 @@ void DRV_CMP_Initialize(void)
 
     PLIB_CMP_NonInvertingInputChannelSelect(CMP_ID_2, CMP_NON_INVERTING_INPUT_CVREF);
     PLIB_CMP_InvertingInputChannelSelect(CMP_ID_2, CMP_INVERTING_INPUT_EXTERNAL_PIN_B);
-    PLIB_CMP_OutputEnable(CMP_ID_2);
 
     PLIB_CMP_OutputInvertDisable(CMP_ID_2);
+    PLIB_CMP_OutputEnable(CMP_ID_2);
 
     /* Setup Interrupt */
     PLIB_CMP_InterruptEventSelect(CMP_ID_2, CMP_INTERRUPT_GENERATION_LOW_TO_HIGH);   

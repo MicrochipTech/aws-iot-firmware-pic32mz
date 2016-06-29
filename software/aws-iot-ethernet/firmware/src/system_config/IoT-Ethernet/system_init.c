@@ -201,7 +201,7 @@ const DRV_USBHS_INIT drvUSBInit =
     .suspendInSleep = false,
 
     /* Identifies peripheral (PLIB-level) ID */
-    .usbID = 0,
+    .usbID = USBHS_ID_0,
 };
 // </editor-fold>
 
@@ -441,6 +441,7 @@ const TCPIP_MODULE_MAC_PIC32INT_CONFIG tcpipMACPIC32INTInitData =
     .phyFlags               = TCPIP_EMAC_PHY_CONFIG_FLAGS,
     .linkInitDelay          = TCPIP_EMAC_PHY_LINK_INIT_DELAY,
     .phyAddress             = TCPIP_EMAC_PHY_ADDRESS,
+    .ethModuleId            = TCPIP_EMAC_MODULE_ID,
     .pPhyObject             = &DRV_ETHPHY_OBJECT_SMSC_LAN8740,
     .pPhyBase               = &DRV_ETHPHY_OBJECT_BASE_Default,
 };
@@ -1038,10 +1039,7 @@ void SYS_Initialize ( void* data )
     
     /* TCPIP Stack Initialization */
     sysObj.tcpip = TCPIP_STACK_Init();
-    if (sysObj.tcpip == SYS_MODULE_OBJ_INVALID)
-    {
-       return;
-    }
+    SYS_ASSERT(sysObj.tcpip != SYS_MODULE_OBJ_INVALID, "TCPIP_STACK_Init Failed" );
 
     /* Set priority of USB interrupt source */
     SYS_INT_VectorPrioritySet(INT_VECTOR_USB1, INT_PRIORITY_LEVEL4);

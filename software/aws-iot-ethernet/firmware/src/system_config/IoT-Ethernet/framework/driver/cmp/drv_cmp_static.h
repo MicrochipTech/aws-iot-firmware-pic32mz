@@ -50,6 +50,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #ifndef _DRV_CMP_STATIC_H
 #define _DRV_CMP_STATIC_H
 
+#include "peripheral/cmp/plib_cmp.h"
+#include "peripheral/int/plib_int.h"
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Headers for the static driver

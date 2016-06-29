@@ -65,8 +65,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "app1.h"
 #include "system_definitions.h"
 #include "peripheral/cmp/plib_cmp.h"
-
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: System Interrupt Vector Functions

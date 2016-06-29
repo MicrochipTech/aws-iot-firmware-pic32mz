@@ -1,5 +1,5 @@
 /*
-    FreeRTOS V8.0.1 - Copyright (C) 2014 Real Time Engineers Ltd. 
+    FreeRTOS V8.2.2 - Copyright (C) 2015 Real Time Engineers Ltd. 
     All rights reserved
 
     VISIT http://www.FreeRTOS.org TO ENSURE YOU ARE USING THE LATEST VERSION.
@@ -103,6 +103,7 @@
 #define configUSE_TIME_SLICING                  0
 #define configUSE_NEWLIB_REENTRANT              0
 #define configENABLE_BACKWARD_COMPATIBILITY     0
+#define configUSE_TASK_FPU_SUPPORT              0
 
 /* Hook function related definitions. */
 #define configUSE_IDLE_HOOK                     0

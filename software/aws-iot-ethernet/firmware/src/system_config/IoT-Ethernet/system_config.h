@@ -18,7 +18,7 @@
     definitions for build-time configuration options that are not instantiated
     until used by another MPLAB Harmony module or application.
     
-    Created with MPLAB Harmony Version 1.07
+    Created with MPLAB Harmony Version 1.08
 *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -74,8 +74,8 @@ extern "C" {
 // *****************************************************************************
 /* Common System Service Configuration Options
 */
-#define SYS_VERSION_STR           "1.07"
-#define SYS_VERSION               10700
+#define SYS_VERSION_STR           "1.08"
+#define SYS_VERSION               10800
 
 // *****************************************************************************
 /* Clock System Service Configuration Options
@@ -476,6 +476,13 @@ extern "C" {
 #define TCPIP_EMAC_RX_LOW_FILL				        2
 #define TCPIP_EMAC_RX_BUFF_SIZE		    			1536
 #define TCPIP_EMAC_RX_MAX_FRAME		    			1536
+#define TCPIP_EMAC_RX_FILTERS                       \
+                                                    TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
+                                                    TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
+                                                    TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
+                                                    TCPIP_MAC_RX_FILTER_TYPE_RUNT_REJECT |\
+                                                    TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
+                                                    0
 #define TCPIP_EMAC_RX_FRAGMENTS		    			1
 #define TCPIP_EMAC_ETH_OPEN_FLAGS       			\
                                                     TCPIP_ETH_OPEN_AUTO |\
@@ -490,6 +497,7 @@ extern "C" {
                                                     0                                                    
 #define TCPIP_EMAC_PHY_LINK_INIT_DELAY  			500
 #define TCPIP_EMAC_PHY_ADDRESS		    			0
+#define TCPIP_EMAC_MODULE_ID		    			ETH_ID_0
 #define TCPIP_EMAC_INTERRUPT_MODE        			true
 #define DRV_ETHPHY_INSTANCES_NUMBER				1
 #define DRV_ETHPHY_CLIENTS_NUMBER				1
@@ -565,11 +573,14 @@ extern "C" {
 #define TCPIP_NETWORK_DEFAULT_DNS 				"192.168.100.1"
 #define TCPIP_NETWORK_DEFAULT_SECOND_DNS 			"0.0.0.0"
 #define TCPIP_NETWORK_DEFAULT_POWER_MODE 			"full"
-#define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS   		TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON
+#define TCPIP_NETWORK_DEFAULT_INTERFACE_FLAGS                       \
+                                                    TCPIP_NETWORK_CONFIG_DHCP_CLIENT_ON |\
+                                                    TCPIP_NETWORK_CONFIG_DNS_CLIENT_ON |\
+                                                    TCPIP_NETWORK_CONFIG_IP_STATIC
 #define TCPIP_NETWORK_DEFAULT_MAC_DRIVER 		    DRV_ETHMAC_PIC32MACObject
 #define TCPIP_NETWORK_DEFAULT_IPV6_ADDRESS 			0
-#define TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH 		0
-#define TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY 		        0
+#define TCPIP_NETWORK_DEFAULT_IPV6_PREFIX_LENGTH    
+#define TCPIP_NETWORK_DEFAULT_IPV6_GATEWAY 		    0
 
 
 /*** TCPIP SYS FS Wrapper ***/
