@@ -154,7 +154,7 @@ You will receive the following back that you will need to add to the firmware in
   - You will need to attached this policy to a principal to allow the cert the rights to publish and subscribe to topics:
 
     ```
-    aws iot attach-principal-policy --principal-arn '<certificate-arn>' --policy-name 'MQTTandShadowPolicy'
+    aws iot attach-principal-policy --principal '<certificate-arn>' --policy-name 'MQTTandShadowPolicy'
     ```
 - Create a thing shadow based on the MAC address of the board:
 
