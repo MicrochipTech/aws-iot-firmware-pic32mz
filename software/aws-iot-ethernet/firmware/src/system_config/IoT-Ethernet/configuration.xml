@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration version="1.0.8.7">
   <General>
-    <HarmonyPath path="../../../../../microchip/harmony/v1_08"/>
+    <HarmonyPath path="../../../../../microchip/harmony/v1_08_01"/>
     <Processor name="PIC32MZ2048EFM064"/>
     <ForceOptimization flag="false"/>
     <MergeStrategy flag="ALL"/>
@@ -2105,7 +2105,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/IoT-Ethernet</Path>
-        <Checksum>61E8FF3882BE95DDEABF8729F16CBFAA</Checksum>
+        <Checksum>818B50C656AA88E1B46956E27C61A418</Checksum>
         <ProjectFileChecksum>482A5320AF41988D4C5016D1ECD7712D</ProjectFileChecksum>
       </Template>
       <Template>
@@ -2213,26 +2213,26 @@
     </Templates>
     <CompilerItems>
       <C32-AS>
-        <Include value="../../../../../../../microchip/harmony/v1_08/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
-        <Include value="../../../../../../../microchip/harmony/v1_08/third_party/rtos/FreeRTOS/Source/include"/>
+        <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
+        <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include"/>
         <Include value="../src/system_config/IoT-Ethernet"/>
       </C32-AS>
       <C32>
         <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src"/>
         <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT-Ethernet"/>
         <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/IoT-Ethernet"/>
-        <Include value="/Users/c14227/microchip/harmony/v1_08/framework"/>
+        <Include value="/Users/c14227/microchip/harmony/v1_08_01/framework"/>
         <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT-Ethernet/framework"/>
-        <Include value="../../../../../../../microchip/harmony/v1_08/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
-        <Include value="../../../../../../../microchip/harmony/v1_08/third_party/rtos/FreeRTOS/Source/include"/>
+        <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
+        <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include"/>
         <Include value="../src/system_config/IoT-Ethernet"/>
         <Define value="HAVE_CONFIG_H"/>
-        <Include value="../../../../../../../microchip/harmony/v1_08/third_party/tcpip/wolfssl"/>
+        <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/tcpip/wolfssl"/>
       </C32>
     </CompilerItems>
     <Libraries>
-      <Library value="../../../../../../../microchip/harmony/v1_08/bin/framework/peripheral/PIC32MZ2048EFM064_peripherals.a"/>
-      <Library value="../../../../../../../microchip/harmony/v1_08/framework/tcpip/src/crypto/aes_pic32mx.a"/>
+      <Library value="../../../../../../../microchip/harmony/v1_08_01/bin/framework/peripheral/PIC32MZ2048EFM064_peripherals.a"/>
+      <Library value="../../../../../../../microchip/harmony/v1_08_01/framework/tcpip/src/crypto/aes_pic32mx.a"/>
     </Libraries>
   </Manifest>
 </configuration>

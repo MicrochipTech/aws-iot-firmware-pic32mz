@@ -13,10 +13,10 @@ This document will show you where to find the latest _released_ version of the f
 You will need the following Microchip development tools to program and develop with the Microchip IoT Ethernet.
 
 - Download the latest project for IoT Ethernet from here: [IoT Ethernet Project](https://github.com/MicrochipTech/aws-iot-firmware-pic32mz/releases/latest)
-- Download and install Microchip MPLAB<sup>&reg;</sup> Harmony Integrated Software Framework v1.08 for your OS from here: [Harmony](http://www.microchip.com/mplab/mplab-harmony)
+- Download and install Microchip MPLAB<sup>&reg;</sup> Harmony Integrated Software Framework v1.08.01 for your OS from here: [Harmony](http://www.microchip.com/mplab/mplab-harmony)
 - Download and install Microchip MPLAB<sup>&reg;</sup> X IDE for your OS from here:
-[Microchip MPLAB<sup>&reg;</sup> X IDE](http://www.microchip.com/mplabx) (3.30 tested)
-- Download and install the v1.40 XC32 compiler for your OS from here (Install both v1.40 and v1.40B - Part Patch): [Microchip MPLAB<sup>&reg;</sup> XC32 Compiler](http://www.microchip.com/xc32) (v1.40 with v1.40B part patch tested)
+[Microchip MPLAB<sup>&reg;</sup> X IDE](http://www.microchip.com/mplabx) (3.35 tested)
+- Download and install the v1.42 XC32 compiler for your OS from here: [Microchip MPLAB<sup>&reg;</sup> XC32 Compiler](http://www.microchip.com/xc32) 
 
 More information about Microchip tools can be found on [Microchip's developer help site](http://microchip.wikidot.com/swtools:start)
 
@@ -34,7 +34,7 @@ Example below is shown on MAC OS X, these instructions may vary slightly on diff
 - With your project opened, right click on the project __aws-iot-ethernet__ in the Projects tab and select  __Set as Main Project__
 - Follow these directions to install the Microchip Harmony Configurator (MHC):  [Steps to Install MHC](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20Configurator%20(MHC)%20and%20MPLAB%20Harmony%20Graphics%20Composer.pdf)
 - Open the MHC by clicking  __Tools -> Embedded -> MPLAB Harmony Configurator__ 
-- The MHC will prompt asking to choose a Harmony framework to use, select "Yes" and select the location of your v1.08 Harmony install and click "OK"
+- The MHC will prompt asking to choose a Harmony framework to use, select "Yes" and select the location of your Harmony install and click "OK"
 - The MHC will then ask if you want to open the configuration file __IoT-Ethernet.mhc__ for the __aws-iot-ethernet__ project, select "Open" to proceed.
 - With the new Harmony framework selected for your project, you will need to regenerate code by clicking the generate code button. ![](images/generateCode.png)
 - A settings window will pop up, check only the box "Create a backup...":  ![](images/mhc-generate-code-settings.png)
@@ -56,6 +56,3 @@ If you are having trouble, check to make sure that each of the issues bellow are
 
 #### Project won't compile due to missing files
 - Often times a project won't compile if you are on a Windows machine due to a limitation in the path length.  Windows OS has a max path length of 260 characters, so file paths are sometimes truncated when attempting to compile which leads to files not being found by the compiler.  Try putting the project in the topmost directory, usually "C:/".  For more information please see [MSDN article from Microsoft](https://msdn.microsoft.com/en-us/library/aa365247%28VS.85%29.aspx#maxpath).
-
-#### Project won't compile due to errors such as missing ADCxxx registers
-- v1.40 compiler must be updated with the v1.40B which is the "Part Patch".  This installer will update your v1.40 compiler with the required files to compile for the part on the IoT Ethernet Kit.  Again, this can be downloaded at [Microchip MPLAB<sup>&reg;</sup> XC32 Compiler](http://www.microchip.com/xc32).
