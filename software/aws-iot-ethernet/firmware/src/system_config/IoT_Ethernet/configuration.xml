@@ -2,9 +2,9 @@
 <configuration version="1.0.8.7">
   <General>
     <HarmonyPath path="../../../../../microchip/harmony/v1_08_01"/>
-    <Processor name="PIC32MZ2048EFM064"/>
-    <ForceOptimization flag="false"/>
-    <MergeStrategy flag="ALL"/>
+    <Processor name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
   </General>
   <Manifest>
     <Files>
@@ -2071,26 +2071,41 @@
     </Files>
     <Templates>
       <Template>
-        <Name>sys_clk_static.h</Name>
-        <Path>Header Files/app/system_config/IoT-Ethernet/framework/system/clk</Path>
-        <Checksum>B4BD59D8D7C4DA95DC5E3B57755FD352</Checksum>
-        <ProjectFileChecksum>8158E9FA37EDAAE7A8339133979A90C1</ProjectFileChecksum>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_cmp_static.h</Name>
+        <Path>Header Files/app/system_config/IoT_Ethernet/framework/driver/cmp</Path>
+        <Checksum>FED6B0E080E26108C7326B955E14FCF9</Checksum>
       </Template>
       <Template>
         <Name>app1.c</Name>
         <Path>Source Files/app</Path>
       </Template>
       <Template>
-        <Name>sys_clk_static.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet/framework/system/clk/src</Path>
-        <Checksum>6C07E4984368F52244D6790084A8ED66</Checksum>
-        <ProjectFileChecksum>A86FCDDB160A3285E627D79A1A67B1B9</ProjectFileChecksum>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet</Path>
+        <Checksum>86C31D642D3B8E0320764D10DF66F3E7</Checksum>
+        <ProjectFileChecksum>33A53CD6D79D1524747AE1F9EE2B70E7</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>rtos_hooks.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet</Path>
+        <Checksum>FA52743264536E5207D2ADBE57B48D05</Checksum>
       </Template>
       <Template>
         <Name>system_init.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet</Path>
+        <Path>Source Files/app/system_config/IoT_Ethernet</Path>
         <Checksum>05F639BB3CB0FECF9AE0D13A0C844813</Checksum>
-        <ProjectFileChecksum>5F229BCF49B3A1C695CCE68672F8E6B0</ProjectFileChecksum>
+        <ProjectFileChecksum>0206F45D1BA7DB4D284E75D3FAAE886C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>net_pres_enc_glue.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet/framework/net/pres</Path>
+        <Checksum>1E2631455852A4F9D1A62E2191F1426F</Checksum>
+        <ProjectFileChecksum>C43AD4D0F6A2BB19E2FFE2BFA31FB853</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>app1.h</Name>
@@ -2098,45 +2113,34 @@
       </Template>
       <Template>
         <Name>FreeRTOSConfig.h</Name>
-        <Path>Header Files/app/system_config/IoT-Ethernet</Path>
+        <Path>Header Files/app/system_config/IoT_Ethernet</Path>
         <Checksum>744CBA78FDD7968068621028750D5383</Checksum>
-        <ProjectFileChecksum>F6F2BB00D87CFDDE6D67B50EE0024C8A</ProjectFileChecksum>
       </Template>
       <Template>
-        <Name>system_config.h</Name>
-        <Path>Header Files/app/system_config/IoT-Ethernet</Path>
-        <Checksum>818B50C656AA88E1B46956E27C61A418</Checksum>
-        <ProjectFileChecksum>482A5320AF41988D4C5016D1ECD7712D</ProjectFileChecksum>
+        <Name>config.h</Name>
+        <Path>Header Files/app/system_config/IoT_Ethernet</Path>
+        <Checksum>8C02EA670A0009B034FA607E6B623109</Checksum>
       </Template>
       <Template>
-        <Name>rtos_hooks.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet</Path>
-        <Checksum>FA52743264536E5207D2ADBE57B48D05</Checksum>
-        <ProjectFileChecksum>E649E6ADB979BE6F00FC2A02431F2675</ProjectFileChecksum>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet/framework/system/clk/src</Path>
+        <Checksum>6C07E4984368F52244D6790084A8ED66</Checksum>
       </Template>
       <Template>
-        <Name>system_interrupt.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet</Path>
-        <Checksum>86C31D642D3B8E0320764D10DF66F3E7</Checksum>
-        <ProjectFileChecksum>12A4DB934254FD0E93D2BA9663E83C7B</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>sys_ports_static.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet/framework/system/ports/src</Path>
-        <Checksum>36873BF1F9E084EA4533621FDDE9BABC</Checksum>
-        <ProjectFileChecksum>9449816727A3F9D34733C434A03C92DC</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>drv_adc_static.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet/framework/driver/adc/src</Path>
-        <Checksum>19E452BFFF370FDB0E970DE6744D98B5</Checksum>
-        <ProjectFileChecksum>465414BD7D8EC86F8909A29FEF21CEFA</ProjectFileChecksum>
+        <Name>drv_cmp_static.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet/framework/driver/cmp/src</Path>
+        <Checksum>9229ECC9F56DA41F253FFDFDCE0A4FB8</Checksum>
       </Template>
       <Template>
         <Name>system_tasks.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet</Path>
+        <Path>Source Files/app/system_config/IoT_Ethernet</Path>
         <Checksum>89286BCD17243EDA735E0E632FC7D251</Checksum>
-        <ProjectFileChecksum>BD4F2906E184728A258C7048D6E34FBB</ProjectFileChecksum>
+        <ProjectFileChecksum>4F75849775C2E52A0978C207FCB68B1C</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>drv_adc_static.h</Name>
+        <Path>Header Files/app/system_config/IoT_Ethernet/framework/driver/adc</Path>
+        <Checksum>35822A1C7F7D588E4A47E3C9DA156B47</Checksum>
       </Template>
       <Template>
         <Name>main.c</Name>
@@ -2144,88 +2148,70 @@
       </Template>
       <Template>
         <Name>net_pres_enc_glue.h</Name>
-        <Path>Header Files/app/system_config/IoT-Ethernet/framework/net/pres</Path>
+        <Path>Header Files/app/system_config/IoT_Ethernet/framework/net/pres</Path>
         <Checksum>00EB3E5CDEA6F53C5AF289FCE43B4ED2</Checksum>
-        <ProjectFileChecksum>E4233B559B86881B2CD312BB3CE1136E</ProjectFileChecksum>
       </Template>
       <Template>
-        <Name>system_exceptions.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet</Path>
-        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
-        <ProjectFileChecksum>F9BC0518430B493D826A20E85505779F</ProjectFileChecksum>
+        <Name>drv_adc_static.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet/framework/driver/adc/src</Path>
+        <Checksum>19E452BFFF370FDB0E970DE6744D98B5</Checksum>
       </Template>
       <Template>
-        <Name>net_pres_cert_store.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet/framework/net/pres</Path>
-        <Checksum>289429D111A99E1156D2E176B9D3D725</Checksum>
-        <ProjectFileChecksum>AE1350B6C587225AB10807A45F008793</ProjectFileChecksum>
+        <Name>system_interrupt_a.S</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet</Path>
+        <Checksum>F55E3DFEFB9F84DD2FCCD04738A5047E</Checksum>
       </Template>
       <Template>
-        <Name>system_definitions.h</Name>
-        <Path>Header Files/app/system_config/IoT-Ethernet</Path>
-        <Checksum>8243587D44F203A0054A7C8DCAC7A1A2</Checksum>
-        <ProjectFileChecksum>5ECBFD4C6BC3EA95DB5A03FC095A5DF1</ProjectFileChecksum>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet/framework/system/ports/src</Path>
+        <Checksum>36873BF1F9E084EA4533621FDDE9BABC</Checksum>
       </Template>
       <Template>
         <Name>app.c</Name>
         <Path>Source Files/app</Path>
       </Template>
       <Template>
-        <Name>net_pres_enc_glue.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet/framework/net/pres</Path>
-        <Checksum>1E2631455852A4F9D1A62E2191F1426F</Checksum>
-        <ProjectFileChecksum>3BC82DE747D624556E384EED43AA5465</ProjectFileChecksum>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/IoT_Ethernet</Path>
+        <Checksum>818B50C656AA88E1B46956E27C61A418</Checksum>
+        <ProjectFileChecksum>157D24060089CE61D2EE26A71BD78435</ProjectFileChecksum>
       </Template>
       <Template>
-        <Name>drv_cmp_static.h</Name>
-        <Path>Header Files/app/system_config/IoT-Ethernet/framework/driver/cmp</Path>
-        <Checksum>FED6B0E080E26108C7326B955E14FCF9</Checksum>
-        <ProjectFileChecksum>E4E53CDF4E77CAFDE07DF49491E2D38F</ProjectFileChecksum>
+        <Name>net_pres_cert_store.c</Name>
+        <Path>Source Files/app/system_config/IoT_Ethernet/framework/net/pres</Path>
+        <Checksum>289429D111A99E1156D2E176B9D3D725</Checksum>
+        <ProjectFileChecksum>1CE0389A2E06849F0CDD17E4E2F847B6</ProjectFileChecksum>
       </Template>
       <Template>
-        <Name>drv_adc_static.h</Name>
-        <Path>Header Files/app/system_config/IoT-Ethernet/framework/driver/adc</Path>
-        <Checksum>35822A1C7F7D588E4A47E3C9DA156B47</Checksum>
-        <ProjectFileChecksum>11DEE21C11A8DB0E2DCF6376BF84EA13</ProjectFileChecksum>
+        <Name>sys_clk_static.h</Name>
+        <Path>Header Files/app/system_config/IoT_Ethernet/framework/system/clk</Path>
+        <Checksum>B4BD59D8D7C4DA95DC5E3B57755FD352</Checksum>
       </Template>
       <Template>
         <Name>app.h</Name>
         <Path>Header Files/app</Path>
       </Template>
       <Template>
-        <Name>drv_cmp_static.c</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet/framework/driver/cmp/src</Path>
-        <Checksum>9229ECC9F56DA41F253FFDFDCE0A4FB8</Checksum>
-        <ProjectFileChecksum>0B132B14A9AE6B700C176F8E7AF2CB45</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>config.h</Name>
-        <Path>Header Files/app/system_config/IoT-Ethernet</Path>
-        <Checksum>8C02EA670A0009B034FA607E6B623109</Checksum>
-        <ProjectFileChecksum>9382250A7E77988049A565F6EC93EB48</ProjectFileChecksum>
-      </Template>
-      <Template>
-        <Name>system_interrupt_a.S</Name>
-        <Path>Source Files/app/system_config/IoT-Ethernet</Path>
-        <Checksum>F55E3DFEFB9F84DD2FCCD04738A5047E</Checksum>
-        <ProjectFileChecksum>18154BC20B48E2A8A3E1A5D7435D35B6</ProjectFileChecksum>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/IoT_Ethernet</Path>
+        <Checksum>8243587D44F203A0054A7C8DCAC7A1A2</Checksum>
       </Template>
     </Templates>
     <CompilerItems>
       <C32-AS>
         <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
         <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include"/>
-        <Include value="../src/system_config/IoT-Ethernet"/>
+        <Include value="../src/system_config/IoT_Ethernet"/>
       </C32-AS>
       <C32>
         <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src"/>
-        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT-Ethernet"/>
-        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/IoT-Ethernet"/>
+        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT_Ethernet"/>
+        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/IoT_Ethernet"/>
         <Include value="/Users/c14227/microchip/harmony/v1_08_01/framework"/>
-        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT-Ethernet/framework"/>
+        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT_Ethernet/framework"/>
         <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
         <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include"/>
-        <Include value="../src/system_config/IoT-Ethernet"/>
+        <Include value="../src/system_config/IoT_Ethernet"/>
         <Define value="HAVE_CONFIG_H"/>
         <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/tcpip/wolfssl"/>
       </C32>

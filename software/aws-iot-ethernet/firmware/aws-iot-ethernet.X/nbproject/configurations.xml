@@ -6,31 +6,31 @@
                    projectFiles="true">
       <logicalFolder name="f4" displayName="app" projectFiles="true">
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
-          <logicalFolder name="f1" displayName="IoT-Ethernet" projectFiles="true">
+          <logicalFolder name="f1" displayName="IoT_Ethernet" projectFiles="true">
             <logicalFolder name="f1" displayName="framework" projectFiles="true">
               <logicalFolder name="f1" displayName="driver" projectFiles="true">
                 <logicalFolder name="f1" displayName="adc" projectFiles="true">
-                  <itemPath>../src/system_config/IoT-Ethernet/framework/driver/adc/drv_adc_static.h</itemPath>
+                  <itemPath>../src/system_config/IoT_Ethernet/framework/driver/adc/drv_adc_static.h</itemPath>
                 </logicalFolder>
                 <logicalFolder name="f2" displayName="cmp" projectFiles="true">
-                  <itemPath>../src/system_config/IoT-Ethernet/framework/driver/cmp/drv_cmp_static.h</itemPath>
+                  <itemPath>../src/system_config/IoT_Ethernet/framework/driver/cmp/drv_cmp_static.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
               <logicalFolder name="f2" displayName="net" projectFiles="true">
                 <logicalFolder name="f1" displayName="pres" projectFiles="true">
-                  <itemPath>../src/system_config/IoT-Ethernet/framework/net/pres/net_pres_enc_glue.h</itemPath>
+                  <itemPath>../src/system_config/IoT_Ethernet/framework/net/pres/net_pres_enc_glue.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
               <logicalFolder name="f3" displayName="system" projectFiles="true">
                 <logicalFolder name="f1" displayName="clk" projectFiles="true">
-                  <itemPath>../src/system_config/IoT-Ethernet/framework/system/clk/sys_clk_static.h</itemPath>
+                  <itemPath>../src/system_config/IoT_Ethernet/framework/system/clk/sys_clk_static.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
-            <itemPath>../src/system_config/IoT-Ethernet/FreeRTOSConfig.h</itemPath>
-            <itemPath>../src/system_config/IoT-Ethernet/config.h</itemPath>
-            <itemPath>../src/system_config/IoT-Ethernet/system_config.h</itemPath>
-            <itemPath>../src/system_config/IoT-Ethernet/system_definitions.h</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/FreeRTOSConfig.h</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/config.h</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/system_config.h</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/system_definitions.h</itemPath>
           </logicalFolder>
         </logicalFolder>
         <itemPath>../src/app.h</itemPath>
@@ -606,45 +606,45 @@
                    projectFiles="true">
       <logicalFolder name="f4" displayName="app" projectFiles="true">
         <logicalFolder name="f1" displayName="system_config" projectFiles="true">
-          <logicalFolder name="f1" displayName="IoT-Ethernet" projectFiles="true">
+          <logicalFolder name="f1" displayName="IoT_Ethernet" projectFiles="true">
             <logicalFolder name="f1" displayName="framework" projectFiles="true">
               <logicalFolder name="f1" displayName="driver" projectFiles="true">
                 <logicalFolder name="f1" displayName="adc" projectFiles="true">
                   <logicalFolder name="f1" displayName="src" projectFiles="true">
-                    <itemPath>../src/system_config/IoT-Ethernet/framework/driver/adc/src/drv_adc_static.c</itemPath>
+                    <itemPath>../src/system_config/IoT_Ethernet/framework/driver/adc/src/drv_adc_static.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
                 <logicalFolder name="f2" displayName="cmp" projectFiles="true">
                   <logicalFolder name="f1" displayName="src" projectFiles="true">
-                    <itemPath>../src/system_config/IoT-Ethernet/framework/driver/cmp/src/drv_cmp_static.c</itemPath>
+                    <itemPath>../src/system_config/IoT_Ethernet/framework/driver/cmp/src/drv_cmp_static.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
               <logicalFolder name="f2" displayName="net" projectFiles="true">
                 <logicalFolder name="f1" displayName="pres" projectFiles="true">
-                  <itemPath>../src/system_config/IoT-Ethernet/framework/net/pres/net_pres_enc_glue.c</itemPath>
-                  <itemPath>../src/system_config/IoT-Ethernet/framework/net/pres/net_pres_cert_store.c</itemPath>
+                  <itemPath>../src/system_config/IoT_Ethernet/framework/net/pres/net_pres_enc_glue.c</itemPath>
+                  <itemPath>../src/system_config/IoT_Ethernet/framework/net/pres/net_pres_cert_store.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
               <logicalFolder name="f3" displayName="system" projectFiles="true">
                 <logicalFolder name="f1" displayName="clk" projectFiles="true">
                   <logicalFolder name="f1" displayName="src" projectFiles="true">
-                    <itemPath>../src/system_config/IoT-Ethernet/framework/system/clk/src/sys_clk_static.c</itemPath>
+                    <itemPath>../src/system_config/IoT_Ethernet/framework/system/clk/src/sys_clk_static.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
                 <logicalFolder name="f2" displayName="ports" projectFiles="true">
                   <logicalFolder name="f1" displayName="src" projectFiles="true">
-                    <itemPath>../src/system_config/IoT-Ethernet/framework/system/ports/src/sys_ports_static.c</itemPath>
+                    <itemPath>../src/system_config/IoT_Ethernet/framework/system/ports/src/sys_ports_static.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
-            <itemPath>../src/system_config/IoT-Ethernet/system_init.c</itemPath>
-            <itemPath>../src/system_config/IoT-Ethernet/system_interrupt.c</itemPath>
-            <itemPath>../src/system_config/IoT-Ethernet/system_exceptions.c</itemPath>
-            <itemPath>../src/system_config/IoT-Ethernet/system_tasks.c</itemPath>
-            <itemPath>../src/system_config/IoT-Ethernet/system_interrupt_a.S</itemPath>
-            <itemPath>../src/system_config/IoT-Ethernet/rtos_hooks.c</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/system_init.c</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/system_interrupt.c</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/system_exceptions.c</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/system_tasks.c</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/system_interrupt_a.S</itemPath>
+            <itemPath>../src/system_config/IoT_Ethernet/rtos_hooks.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <itemPath>../src/app.c</itemPath>
@@ -898,13 +898,13 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
-    <Elem>../src/IoT-Ethernet</Elem>
-    <Elem>../src/system_config/IoT-Ethernet</Elem>
     <Elem>../../../../../microchip/harmony/v1_08_01</Elem>
+    <Elem>../src/IoT_Ethernet</Elem>
+    <Elem>../src/system_config/IoT_Ethernet</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="IoT-Ethernet" type="2">
+    <conf name="IoT_Ethernet" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MZ2048EFM064</targetDevice>
@@ -948,12 +948,12 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/wolfmqttsdk/;../src;../src/system_config/IoT-Ethernet;../src/IoT-Ethernet;../../../../../../../microchip/harmony/v1_08_01/framework;../src/system_config/IoT-Ethernet/framework;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../../../../../../../microchip/harmony/v1_08_01/third_party/tcpip/wolfssl"/>
+                  value="../src/wolfmqttsdk/;../src;../src/system_config/IoT_Ethernet;../src/IoT_Ethernet;../../../../../../../microchip/harmony/v1_08_01/framework;../src/system_config/IoT_Ethernet/framework;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../../../../../../../microchip/harmony/v1_08_01/third_party/tcpip/wolfssl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value=""/>
+        <property key="optimization-level" value="-O1"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
@@ -973,9 +973,10 @@
         <property key="enable-symbols" value="true"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
-        <property key="extra-include-directories-for-assembler" value=";"/>
+        <property key="extra-include-directories-for-assembler"
+                  value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../src/system_config/IoT_Ethernet"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../src/system_config/IoT-Ethernet"/>
+                  value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../src/system_config/IoT_Ethernet"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
