@@ -973,7 +973,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
-        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-assembler" value=";"/>
         <property key="extra-include-directories-for-preprocessor"
                   value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../src/system_config/IoT-Ethernet"/>
         <property key="false-conditionals" value="false"/>
@@ -1359,6 +1359,11 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram" value="true"/>
+        <property key="memories.instruction.ram.end"
+                  value="${memories.instruction.ram.end.value}"/>
+        <property key="memories.instruction.ram.start"
+                  value="${memories.instruction.ram.start.value}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x1d1fffff"/>
         <property key="memories.programmemory.partition2" value="true"/>
