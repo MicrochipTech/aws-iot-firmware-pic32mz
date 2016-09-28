@@ -26,42 +26,6 @@ You will need the following Microchip development tools to run out of box demo
 > NOTE: If you are a **Microchip Employee** we have a corporate AWS account that must be used.  To setup your AWS IoT device please go to https://setup.iot.microchip.com for more information
 
 ---
-### Setting Up the AWS Command Line Interface
-#### Linux, Unix, and Windows Installations
-Follow the instructions in the [Getting Set Up with the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) for installations for your operating system.
-
-#### Mac OS X Installation
-This assumes that you have not installed previous version of Python, awscli, or openssl; if you have you will need to uninstall those versions.  You will need to use a version of openssl 1.0.0 or later to connect to AWS IoT services as TLS 1.1 is required.  To do this follow the these steps:
-
-1. Use [Homebrew](http://brew.sh/) to install the latest version of openssl with the following commands in a terminal window.  You will need to force the links so that Python will use the right version of openssl.
-
-  ```
-  brew update
-  brew install openssl
-  brew link --force openssl
-  ```
-- Reinstall Python to use the latest openssl:
-
-  ```
-  brew install python --with-brewed-openssl
-  ```
-- To verify that python was updated run the following command and make sure the version os greater than 1.0.2d
-
-  ```
-  python -c 'import ssl; print ssl.OPENSSL_VERSION'
-  ```
-- Install/upgrade the AWS CLI:
-
-  ```
-  pip install --upgrade awscli
-  ```
-- To verify the version of the AWS CLI tool installed run the following command and look for version 1.10.x or greater:
-
-  ```
-  aws --version
-  ```
-
----
 ### Setting Up the AWS IoT Service
 
 To setup your AWS IoT service to work with the _IoT Ethernet Kit_ you will need to work with the awscli that you installed in the previous section.
