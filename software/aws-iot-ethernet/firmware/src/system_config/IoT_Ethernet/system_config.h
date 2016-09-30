@@ -18,7 +18,7 @@
     definitions for build-time configuration options that are not instantiated
     until used by another MPLAB Harmony module or application.
     
-    Created with MPLAB Harmony Version 1.08
+    Created with MPLAB Harmony Version 1.08.01
 *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -74,8 +74,8 @@ extern "C" {
 // *****************************************************************************
 /* Common System Service Configuration Options
 */
-#define SYS_VERSION_STR           "1.08"
-#define SYS_VERSION               10800
+#define SYS_VERSION_STR           "1.08.01"
+#define SYS_VERSION               10801
 
 // *****************************************************************************
 /* Clock System Service Configuration Options
