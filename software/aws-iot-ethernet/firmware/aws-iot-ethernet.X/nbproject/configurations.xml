@@ -948,7 +948,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/wolfmqttsdk/;../src;../src/system_config/IoT_Ethernet;../src/IoT_Ethernet;../../../../../../../microchip/harmony/v1_08_01/framework;../src/system_config/IoT_Ethernet/framework;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../../../../../../../microchip/harmony/v1_08_01/third_party/tcpip/wolfssl"/>
+                  value="../src/wolfmqttsdk/;../src;../src/IoT_Ethernet;../../../../../../../microchip/harmony/v1_08_01/framework;../src/system_config/IoT_Ethernet/framework;../src/system_config/IoT_Ethernet;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../../../../../../../microchip/harmony/v1_08_01/third_party/tcpip/wolfssl"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -973,8 +973,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
-        <property key="extra-include-directories-for-assembler"
-                  value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../src/system_config/IoT_Ethernet"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
         <property key="extra-include-directories-for-preprocessor"
                   value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include;../src/system_config/IoT_Ethernet"/>
         <property key="false-conditionals" value="false"/>
