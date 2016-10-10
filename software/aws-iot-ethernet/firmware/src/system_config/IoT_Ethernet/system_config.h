@@ -490,6 +490,7 @@ extern "C" {
                                                     TCPIP_ETH_OPEN_HDUPLEX |\
                                                     TCPIP_ETH_OPEN_100 |\
                                                     TCPIP_ETH_OPEN_10 |\
+                                                    TCPIP_ETH_OPEN_MDIX_SWAP |\
                                                     TCPIP_ETH_OPEN_RMII |\
                                                     0
 #define TCPIP_EMAC_PHY_CONFIG_FLAGS     			\

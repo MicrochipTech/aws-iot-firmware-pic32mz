@@ -85,7 +85,7 @@ APP_DATA appData;
 extern APP1_DATA app1Data;
 
 #define APP_HARDWARE  "iot_ethernet_dm990004"
-#define APP_FIRMWARE_VERSION "1.3.0"
+#define APP_FIRMWARE_VERSION "1.3.1-rc1"
 
 char topic_awsUpdate[128];
 char topic_awsUpdateDelta[128];
