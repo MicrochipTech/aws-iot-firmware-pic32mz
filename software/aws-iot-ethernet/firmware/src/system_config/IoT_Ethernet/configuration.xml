@@ -3,7 +3,7 @@
   <General>
     <HarmonyPath path="../../../../../microchip/harmony/v1_08_01"/>
     <Processor name=""/>
-    <ForceOptimization flag="true"/>
+    <ForceOptimization flag="false"/>
     <MergeStrategy flag="USER_ALL"/>
   </General>
   <Manifest>
@@ -2088,7 +2088,7 @@
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/IoT_Ethernet</Path>
         <Checksum>86C31D642D3B8E0320764D10DF66F3E7</Checksum>
-        <ProjectFileChecksum>33A53CD6D79D1524747AE1F9EE2B70E7</ProjectFileChecksum>
+        <ProjectFileChecksum>FD1C1F092F1F05FD568707470D094515</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>rtos_hooks.c</Name>
@@ -2099,13 +2099,13 @@
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/IoT_Ethernet</Path>
         <Checksum>05F639BB3CB0FECF9AE0D13A0C844813</Checksum>
-        <ProjectFileChecksum>0206F45D1BA7DB4D284E75D3FAAE886C</ProjectFileChecksum>
+        <ProjectFileChecksum>978B1705D7F75DE794BCD546B3C18EC2</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>net_pres_enc_glue.c</Name>
         <Path>Source Files/app/system_config/IoT_Ethernet/framework/net/pres</Path>
         <Checksum>1E2631455852A4F9D1A62E2191F1426F</Checksum>
-        <ProjectFileChecksum>C43AD4D0F6A2BB19E2FFE2BFA31FB853</ProjectFileChecksum>
+        <ProjectFileChecksum>89A4592A3CA344BDBE9E3C25D066D40D</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>app1.h</Name>
@@ -2135,7 +2135,7 @@
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/IoT_Ethernet</Path>
         <Checksum>89286BCD17243EDA735E0E632FC7D251</Checksum>
-        <ProjectFileChecksum>4F75849775C2E52A0978C207FCB68B1C</ProjectFileChecksum>
+        <ProjectFileChecksum>B4088088DD64523E1CFE768CCF62BBAE</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>drv_adc_static.h</Name>
@@ -2173,14 +2173,14 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/IoT_Ethernet</Path>
-        <Checksum>818B50C656AA88E1B46956E27C61A418</Checksum>
-        <ProjectFileChecksum>157D24060089CE61D2EE26A71BD78435</ProjectFileChecksum>
+        <Checksum>F945AB303D812CCE1B11CD4A8C0AC228</Checksum>
+        <ProjectFileChecksum>FA038498C347E22B99A336444F231FB4</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>net_pres_cert_store.c</Name>
         <Path>Source Files/app/system_config/IoT_Ethernet/framework/net/pres</Path>
         <Checksum>289429D111A99E1156D2E176B9D3D725</Checksum>
-        <ProjectFileChecksum>1CE0389A2E06849F0CDD17E4E2F847B6</ProjectFileChecksum>
+        <ProjectFileChecksum>6C29B88E057357517F4F1EE4A796A1F4</ProjectFileChecksum>
       </Template>
       <Template>
         <Name>sys_clk_static.h</Name>
@@ -2204,11 +2204,11 @@
         <Include value="../src/system_config/IoT_Ethernet"/>
       </C32-AS>
       <C32>
-        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src"/>
-        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT_Ethernet"/>
-        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/IoT_Ethernet"/>
-        <Include value="/Users/c14227/microchip/harmony/v1_08_01/framework"/>
-        <Include value="/Users/c14227/Documents/git-projects/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT_Ethernet/framework"/>
+        <Include value="/Users/c14848/Documents/git_proj/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src"/>
+        <Include value="/Users/c14848/Documents/git_proj/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT_Ethernet"/>
+        <Include value="/Users/c14848/Documents/git_proj/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/IoT_Ethernet"/>
+        <Include value="/Users/c14848/microchip/harmony/v1_08_01/framework"/>
+        <Include value="/Users/c14848/Documents/git_proj/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware/src/system_config/IoT_Ethernet/framework"/>
         <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
         <Include value="../../../../../../../microchip/harmony/v1_08_01/third_party/rtos/FreeRTOS/Source/include"/>
         <Include value="../src/system_config/IoT_Ethernet"/>
