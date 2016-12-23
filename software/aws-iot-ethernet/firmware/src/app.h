@@ -74,25 +74,34 @@ extern "C" {
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
+
+#define APP_HARDWARE  "iot_ethernet_dm990004"
+#define APP_TITLE       "iot_ethernet"
+#define APP_PART_NUMBER "dm990004"
+#define APP_FIRMWARE_VERSION "2.0.0"
+    
+// String literals for debugging
+   
 #define AWS_IOT_PORT 8883
     
-#define NVM_CLIENT_CERTIFICATE_SPACE    (32 * 1024)
-#define NVM_CLIENT_KEY_SPACE            (16 * 1024)
-#define NVM_HOST_ADDRESS_SPACE          (64 * 1024)
+#define NVM_CLIENT_CERTIFICATE_SPACE    (64 * 1024)
+#define NVM_CLIENT_KEY_SPACE            (48 * 1024)
+#define NVM_HOST_ADDRESS_SPACE          (32 * 1024)
     
 /* Application Codes */
 enum AppCodes {
+    APP_CODE_ERROR_BAD_ARG = -255,
+    APP_CODE_ERROR_OUT_OF_BUFFER,
+    APP_CODE_ERROR_SSL_FATAL,
+    APP_CODE_ERROR_INVALID_SOCKET,
+    APP_CODE_ERROR_FAILED_TO_BEGIN_DNS_RESOLUTION,
+    APP_CODE_ERROR_DNS_FAILED,
+    APP_CODE_ERROR_FAILED_SSL_NEGOTIATION,
+    APP_CODE_ERROR_TIMEOUT,
+    APP_CODE_ERROR_CMD_TIMEOUT,
     APP_CODE_SUCCESS = 0,
-    APP_CODE_ERROR_BAD_ARG = -1,
-    APP_CODE_ERROR_OUT_OF_BUFFER = -2,
-    APP_CODE_ERROR_SSL_FATAL = -3,
-    APP_CODE_ERROR_INVALID_SOCKET = -4,
-    APP_CODE_ERROR_FAILED_TO_BEGIN_DNS_RESOLUTION = -5,
-    APP_CODE_ERROR_DNS_FAILED = -6,
-    APP_CODE_ERROR_FAILED_SSL_NEGOTIATION = -7,
-    APP_CODE_ERROR_TIMEOUT = -8,
-    APP_CODE_ERROR_CMD_TIMEOUT = -9,
 };
+
 // *****************************************************************************
 /* Application states
 
@@ -108,9 +117,9 @@ typedef enum
 {
 	/* Application's state machine's initial state. */
 	APP_STATE_INIT=0,
-	APP_NVM_MOUNT_DISK,
     APP_NVM_ERASE_CONFIGURATION,
     APP_NVM_LOAD_CONFIGURATION,
+    APP_NVM_WRITE_CONFIGURATION,
     APP_TCPIP_WAIT_INIT,
     APP_TCPIP_WAIT_FOR_IP,
     APP_TCPIP_WAIT_CONFIGURATION,
@@ -120,6 +129,7 @@ typedef enum
     APP_TCPIP_MQTT_SUBSCRIBE,
     APP_TCPIP_MQTT_LOOP,
     APP_TCPIP_ERROR,
+    APP_FATAL_ERROR
 
 } APP_STATES;
 
@@ -142,8 +152,8 @@ typedef struct
     /* The application's current state */
     APP_STATES state;
 
-    // Last twelve characters of MAC address
-    char uuid[12 + 1];
+    // MAC Address of board
+    char macAddress[12 + 1];
     
     // Client certificate location
     __attribute__ ((aligned(4))) unsigned char clientCert[2048];
@@ -158,19 +168,29 @@ typedef struct
     void* ctx;
     void* ssl;
     
+    // Is board commissioned boolean flag
+    bool isCommissioned;
+    bool writeToNVM;
+    
     // The AWS endpoint to access the AWS IoT Service
-    unsigned char host[256];
+    __attribute__ ((aligned(4))) unsigned char host[256];
 
     // The AWS endpoint IP address location
     IP_MULTI_ADDRESS  host_ipv4;
     
-    TCPIP_MAC_ADDR          macAddress;
-    
     // NVM Driver
     DRV_HANDLE nvmHandle;
-    DRV_NVM_COMMAND_HANDLE      nvmCommandHandle;
+    DRV_NVM_COMMAND_HANDLE      nvmCommandHandle[10];
     SYS_FS_MEDIA_GEOMETRY       *gAppNVMMediaGeometry;
     DRV_NVM_COMMAND_STATUS      nvmStatus;
+    
+    /* Counter to track the number of successful command 
+    complete events */
+    uint8_t                     eventCount;
+    
+    /* Counter to track the number of unsuccessful command 
+    complete events */
+    uint8_t                     errorEventCount;
     
     // Timers
     uint32_t genericUseTimer;
@@ -194,6 +214,12 @@ typedef struct
     bool led2val;
     bool led3val;
     bool led4val;
+    
+    // Debug Variables
+    bool socket_connected;
+    bool mqtt_connected;
+    bool debugSet;
+    IP_MULTI_ADDRESS  board_ipAddr;
     
 } APP_DATA;
 
@@ -281,6 +307,7 @@ void APP_Tasks( void );
 bool APP_TIMER_Expired(uint32_t * timer, uint32_t seconds);
 bool APP_TIMER_Expired_ms(uint32_t * timer, uint32_t mseconds);
 bool APP_TIMER_Set(uint32_t * timer);
+void APP_DebugMessage(int DebugMessage);
 
 #endif /* _APP_H */
 

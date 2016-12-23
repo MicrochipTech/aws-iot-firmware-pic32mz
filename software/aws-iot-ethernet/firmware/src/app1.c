@@ -120,7 +120,7 @@ void APP1_Initialize ( void )
     /* Place the App state machine in its initial state. */
     app1Data.state = APP1_STATE_INIT;
     BSP_Initialize();
-    BSP_LED_LightShowSet(BSP_LED_CONNECTING_TO_AP);
+    BSP_LED_LightShowSet(BSP_LED_EASY_CONFIGURATION);
     app1Data.newPotSamp = 0;
     app1Data.potTimer = 0;
     app1Data.newVoltageSamp = 0;
@@ -138,7 +138,7 @@ void APP1_Initialize ( void )
         ; // Handle this
     }
     // Queue for potentiometer data
-    // This will hold the latest potentionmeter data
+    // This will hold the latest potentiometer data
     app1Data.potentiometerQueue = xQueueCreate( 20, sizeof(app1Data.potValue) );
     if(app1Data.potentiometerQueue == NULL) {
         ; // Handle this

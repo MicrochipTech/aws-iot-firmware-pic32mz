@@ -15,7 +15,7 @@ You will need the following Microchip development tools to program the Microchip
 
 - Download the latest HEX file for IoT Ethernet from here: [IoT Ethernet Project](https://github.com/MicrochipTech/aws-iot-firmware-pic32mz/releases/latest)
 - Download and install Microchip MPLAB<sup>&reg;</sup> X IDE for your OS from here:
-[Microchip MPLAB<sup>&reg;</sup> X IDE](http://www.microchip.com/mplabx) (3.35 tested)
+[Microchip MPLAB<sup>&reg;</sup> X IDE](http://www.microchip.com/mplabx) 
 - PICKit<sup>&trade;</sup> 3 In-Circuit Debugger/Programmer (or other programmer)
 
 ---

@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app1.h
+    app2.h
 
   Summary:
     This header file provides prototypes and definitions for the application.
@@ -43,8 +43,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
  *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef _APP1_H
-#define _APP1_H
+#ifndef _APP2_H
+#define _APP2_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -59,8 +59,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system_config.h"
 #include "system_definitions.h"
 
-#include "bsp_config.h"
-
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -74,11 +72,17 @@ extern "C" {
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
-struct switchMessage {
-    BSP_SWITCH_ENUM switchNum;
-    BSP_SWITCH_STATE switchVal;
-};
+/* Application USB Device CDC Read Buffer Size. This should be a multiple of
+ * the CDC Bulk Endpoint size */
 
+#define APP_READ_BUFFER_SIZE 4096
+#define APP_WRITE_BUFFER_SIZE 512
+#define APP_MESSAGE_BUFFER_SIZE 4096
+    
+/* Macro defines USB internal DMA Buffer criteria*/
+
+#define APP_MAKE_BUFFER_DMA_READY  __attribute__((coherent)) __attribute__((aligned(16)))
+    
 // *****************************************************************************
 /* Application states
 
@@ -93,12 +97,33 @@ struct switchMessage {
 typedef enum
 {
 	/* Application's state machine's initial state. */
-	APP1_STATE_INIT=0,
-	APP1_STATE_SERVICE_TASKS,
+    APP2_STATE_INIT=0,
 
-	/* TODO: Define states used by the application state machine. */
+    /* Application waits for device configuration*/
+    APP2_STATE_WAIT_FOR_CONFIGURATION,
 
-} APP1_STATES;
+    /* Check for data */
+    APP2_STATE_SCHEDULE_READ,   
+     
+    /* Wait for read complete */
+    APP2_STATE_WAIT_FOR_READ_COMPLETE,
+
+    /* Wait for the TX to get completed */
+    APP2_STATE_SCHEDULE_WRITE,
+
+    /* Wait for the write to complete */
+    APP2_STATE_WAIT_FOR_WRITE_COMPLETE,
+            
+    /* Schedule a debug message */
+    APP2_STATE_WAIT_FOR_DEBUG_WRITE_COMPLETE,
+            
+    /* Wait for debug write complete */
+    APP2_STATE_SCHEDULE_DEBUG_WRITE,
+            
+    /* Application Error state*/
+    APP2_STATE_ERROR
+
+} APP2_STATES;
 
 
 // *****************************************************************************
@@ -116,29 +141,61 @@ typedef enum
 
 typedef struct
 {
-    /* The application's current state */
-    APP1_STATES state;
-    
-    /* RTOS Queues */
-    QueueHandle_t switchQueue;
-    QueueHandle_t lightShowQueue;
-    QueueHandle_t potentiometerQueue;
-    
-    /* Potentiometer variables */
-    uint32_t    newPotSamp;
-    uint32_t    potValue;
-    bool        potChanged;
-    
-    /* LVD variables */
-    uint32_t    newVoltageSamp;
-    uint32_t    voltageValue;
-    bool        compTrip;
-    bool        currIsLVD;
-    
-    /* Timers */
-    uint32_t    potTimer;
+/* Device layer handle returned by device layer open function */
+    USB_DEVICE_HANDLE deviceHandle;
 
-} APP1_DATA;
+    /* Application's current state*/
+    APP2_STATES state;
+
+    /* Set Line Coding Data */
+    USB_CDC_LINE_CODING setLineCodingData;
+
+    /* Device configured state */
+    bool isConfigured;
+
+    /* Get Line Coding Data */
+    USB_CDC_LINE_CODING getLineCodingData;
+
+    /* Control Line State */
+    USB_CDC_CONTROL_LINE_STATE controlLineStateData;
+
+    /* Read transfer handle */
+    USB_DEVICE_CDC_TRANSFER_HANDLE readTransferHandle;
+
+    /* Write transfer handle */
+    USB_DEVICE_CDC_TRANSFER_HANDLE writeTransferHandle;
+
+    /* True if a character was read */
+    bool isReadComplete;
+
+    /* True if a character was written*/
+    bool isWriteComplete;
+
+
+    /* Flag determines SOF event occurrence */
+    bool sofEventHasOccurred;
+
+    /* Break data */
+    uint16_t breakData;
+
+    /* Switch debounce timer */
+    unsigned int switchDebounceTimer;
+
+    unsigned int debounceCount;
+
+    /* Application CDC read buffer */
+    char * readBuffer;
+    
+    /* Application CDC write buffer */
+    char * writeBuffer;
+    
+    /* Application timers */
+    uint32_t messageTimeout;
+    
+    /* Application handler */
+    QueueHandle_t debugQueue;
+    
+} APP2_DATA;
 
 
 // *****************************************************************************
@@ -157,7 +214,7 @@ typedef struct
 
 /*******************************************************************************
   Function:
-    void APP1_Initialize ( void )
+    void APP2_Initialize ( void )
 
   Summary:
      MPLAB Harmony application initialization routine.
@@ -179,19 +236,19 @@ typedef struct
 
   Example:
     <code>
-    APP1_Initialize();
+    APP2_Initialize();
     </code>
 
   Remarks:
     This routine must be called from the SYS_Initialize function.
 */
 
-void APP1_Initialize ( void );
+void APP2_Initialize ( void );
 
 
 /*******************************************************************************
   Function:
-    void APP1_Tasks ( void )
+    void APP2_Tasks ( void )
 
   Summary:
     MPLAB Harmony Demo application tasks function
@@ -212,17 +269,17 @@ void APP1_Initialize ( void );
 
   Example:
     <code>
-    APP1_Tasks();
+    APP2_Tasks();
     </code>
 
   Remarks:
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP1_Tasks( void );
+void APP2_Tasks( void );
 
 
-#endif /* _APP1_H */
+#endif /* _APP2_H */
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
