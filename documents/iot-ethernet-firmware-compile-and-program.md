@@ -13,10 +13,10 @@ This document will show you where to find the latest _released_ version of the f
 You will need the following Microchip development tools to program and develop with the Microchip IoT Ethernet.
 
 - Download the latest project for IoT Ethernet from here: [IoT Ethernet Project](https://github.com/MicrochipTech/aws-iot-firmware-pic32mz/releases/latest)
-- Download and install Microchip MPLAB<sup>&reg;</sup> Harmony Integrated Software Framework v1.08.01 for your OS from here: [Harmony](http://www.microchip.com/mplab/mplab-harmony)
+- Download and install Microchip MPLAB<sup>&reg;</sup> Harmony Integrated Software Framework v1.09 for your OS from here: [Harmony](http://www.microchip.com/mplab/mplab-harmony)
 - Download and install Microchip MPLAB<sup>&reg;</sup> X IDE for your OS from here:
-[Microchip MPLAB<sup>&reg;</sup> X IDE](http://www.microchip.com/mplabx) (3.35 tested)
-- Download and install the v1.42 XC32 compiler for your OS from here: [Microchip MPLAB<sup>&reg;</sup> XC32 Compiler](http://www.microchip.com/xc32) 
+[Microchip MPLAB<sup>&reg;</sup> X IDE](http://www.microchip.com/mplabx) (3.40 Required)
+- Download and install the v1.42 XC32 compiler for your OS from here: [Microchip MPLAB<sup>&reg;</sup> XC32 Compiler](http://www.microchip.com/xc32)
 
 More information about Microchip tools can be found on [Microchip's developer help site](http://microchip.wikidot.com/swtools:start)
 
@@ -32,8 +32,10 @@ Example below is shown on MAC OS X, these instructions may vary slightly on diff
 - Navigate to: `  <path-to-your-project>/aws-iot-firmware-pic32mz/software/aws-iot-ethernet/firmware`
 - Select the project __aws-iot-ethernet.X__
 - With your project opened, right click on the project __aws-iot-ethernet__ in the Projects tab and select  __Set as Main Project__
+- Select the configuration for the board you wish to program from the dropdown box at the top.
+![](images/configurationSelect.png)
 - Follow these directions to install the Microchip Harmony Configurator (MHC):  [Steps to Install MHC](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20Configurator%20(MHC)%20and%20MPLAB%20Harmony%20Graphics%20Composer.pdf)
-- Open the MHC by clicking  __Tools -> Embedded -> MPLAB Harmony Configurator__ 
+- Open the MHC by clicking  __Tools -> Embedded -> MPLAB Harmony Configurator__
 - The MHC will prompt asking to choose a Harmony framework to use, select "Yes" and select the location of your Harmony install and click "OK"
 - The MHC will then ask if you want to open the configuration file __IoT-Ethernet.mhc__ for the __aws-iot-ethernet__ project, select "Open" to proceed.
 - With the new Harmony framework selected for your project, you will need to regenerate code by clicking the generate code button. ![](images/generateCode.png)

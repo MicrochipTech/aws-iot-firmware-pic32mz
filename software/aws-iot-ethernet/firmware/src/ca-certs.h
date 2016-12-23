@@ -4,6 +4,7 @@
 #define CERTS_H
 
 #ifdef USE_CERT_BUFFERS_2048
+
 /* ./rootCA.der, 2048-bit */
 static const unsigned char caCert[] =
 {

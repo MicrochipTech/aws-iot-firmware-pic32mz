@@ -1,0 +1,2388 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration version="1.0.9.2">
+  <DisplayManager>
+    <SystemInitScript/>
+    <SystemStartScript/>
+  </DisplayManager>
+  <General>
+    <HarmonyPath path="../../../../../microchip/harmony/v1_09"/>
+    <Processor name=""/>
+    <ForceOptimization flag="true"/>
+    <MergeStrategy flag="USER_ALL"/>
+  </General>
+  <Manifest>
+    <Files>
+      <File>
+        <Name>tfm.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>dhcp_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ecdsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>ecc.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>helpers.h</Name>
+        <Path>Header Files/framework/tcpip/src/common</Path>
+      </File>
+      <File>
+        <Name>usb_device_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>dsa.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>evp.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>echoclient.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/examples/echoclient</Path>
+      </File>
+      <File>
+        <Name>list.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>pwdbased.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>pkcs7.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>usb_device.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>mem_track.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl</Path>
+      </File>
+      <File>
+        <Name>ipv6_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>blake2-impl.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>conf.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>sha512.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>tcp_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>tls.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>zero_conf_helper.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>settings.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_smsc8700.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>system.h</Name>
+        <Path>Header Files/framework/system</Path>
+      </File>
+      <File>
+        <Name>unit.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/tests</Path>
+      </File>
+      <File>
+        <Name>oahash.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>crl.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>drv_nvm_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/nvm/src</Path>
+      </File>
+      <File>
+        <Name>peripheral_common_32bit.h</Name>
+        <Path>Header Files/framework/peripheral</Path>
+      </File>
+      <File>
+        <Name>dns_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>version.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>srp.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>net_pres_certstore.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
+        <Name>internal.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>compress.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>stack.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>sha.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>des3.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>hash.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>rand.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>hc128.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>logging.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>asn.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>tcpip_reboot.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>md4.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ipv4_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ui.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>chacha.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>timers.c</Name>
+        <Path>Source Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>error-crypt.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>net_pres_local.h</Name>
+        <Path>Header Files/framework/net/pres/priv</Path>
+      </File>
+      <File>
+        <Name>arc4.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>heap_2.c</Name>
+        <Path>Source Files/FreeRTOS/portable/MemMang</Path>
+      </File>
+      <File>
+        <Name>ecdh.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>rabbit.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>tcpip_announce.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>blake2-int.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>md4.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>dsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>hmac.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>net_pres_socketapiconversion.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
+        <Name>lhash.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>fips_test.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>tcpip_commands_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>peripheral_common.h</Name>
+        <Path>Header Files/framework/peripheral</Path>
+      </File>
+      <File>
+        <Name>sys_int_pic32.c</Name>
+        <Path>Source Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>md2.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>net_pres.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
+        <Name>aes.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>rsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>rsa.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>aes.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>usb_device.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>aes_cbc.h</Name>
+        <Path>Header Files/framework/tcpip/src/crypto</Path>
+      </File>
+      <File>
+        <Name>sys_tmr_local.h</Name>
+        <Path>Header Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_mac_object.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>md5.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>ocsp.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>asn1.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>lldp_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs.c</Name>
+        <Path>Source Files/framework/system/fs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>usb_cdc.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>zero_conf_multicast_dns.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>fe_low_mem.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>blake2-impl.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>mpfs.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>drv_nvm_local.h</Name>
+        <Path>Header Files/framework/driver/nvm/src</Path>
+      </File>
+      <File>
+        <Name>ocsp.c</Name>
+        <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>wc_encrypt.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>port.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_int.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>client.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/examples/client</Path>
+      </File>
+      <File>
+        <Name>ndp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>error-crypt.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>sha256.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>ripemd.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>crypto.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>tasks.c</Name>
+        <Path>Source Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>usb_common.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>hmac.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>poly1305.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>rabbit.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>dh.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>drv_ethmac_lib.h</Name>
+        <Path>Header Files/framework/driver/ethmac/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>bn.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>osal_impl_none.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>tftpc_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ec.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>dhcpv6.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>misc.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_cache_pic32mz.S</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>aes_ecb_pic32.h</Name>
+        <Path>Header Files/framework/tcpip/src/crypto</Path>
+      </File>
+      <File>
+        <Name>rsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>md2.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_smsc8720.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>md4.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>md5.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ripemd.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>camellia.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>sys_module.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_pic32mz.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager_local.h</Name>
+        <Path>Header Files/framework/system/fs/src</Path>
+      </File>
+      <File>
+        <Name>nbns_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>dsa.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>tcpip.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>ge_operations.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>sys_queue.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>md2.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>ripemd.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>dhcps_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>net_pres_socketapi.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
+        <Name>hash.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>ipv4_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs.h</Name>
+        <Path>Header Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>version.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl</Path>
+      </File>
+      <File>
+        <Name>tcpip_commands.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>zero_conf_link_local.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>md4.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>engine.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>certs_test.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_cache.h</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_types.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>berkeley_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>http_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>smtp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>sha.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>md4.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>ndp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>net_pres.c</Name>
+        <Path>Source Files/framework/net/pres</Path>
+      </File>
+      <File>
+        <Name>wc_port.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>port.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>camellia.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>smtpc_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>blake2-int.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.c</Name>
+        <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>hash_fnv.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sha.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>error-ssl.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.h</Name>
+        <Path>Header Files/framework/system/tmr</Path>
+      </File>
+      <File>
+        <Name>ocsp.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>rsa.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>server.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/examples/server</Path>
+      </File>
+      <File>
+        <Name>compress.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>udp.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ocsp.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>tcpip_notify.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>projdefs.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>sha256.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>x509.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>poly1305.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>lldp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>http.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>integer.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>tcpip_manager_control.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>osal_definitions.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>dsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>tcpip_heap.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>dsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>md5.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>drv_nvm.c</Name>
+        <Path>Source Files/framework/driver/nvm/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>aes_cfb.h</Name>
+        <Path>Header Files/framework/tcpip/src/crypto</Path>
+      </File>
+      <File>
+        <Name>port_asm.S</Name>
+        <Path>Source Files/FreeRTOS/portable/MPLAB/PIC32MZ</Path>
+      </File>
+      <File>
+        <Name>usb_device_cdc_acm.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>tfm.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>sys_devcon_local.h</Name>
+        <Path>Header Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>hash_fnv.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>drv_ethmac.h</Name>
+        <Path>Header Files/framework/driver/ethmac</Path>
+      </File>
+      <File>
+        <Name>usb_device_cdc.c</Name>
+        <Path>Source Files/framework/usb/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>crypto.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>rsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>blake2.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>ossl_typ.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.c</Name>
+        <Path>Source Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>tcp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ec.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>test.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>asn.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>drv_wifi.h</Name>
+        <Path>Header Files/framework/driver/wifi/mrf24w</Path>
+      </File>
+      <File>
+        <Name>des3.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>callbacks.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>dhcp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>crypto.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>sntp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>sha256.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>bio.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>tcpip_announce_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>dhcps.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>types.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>dnss_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>hmac.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ssl.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_heap_internal.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>evp.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>drv_tmr.c</Name>
+        <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_smsc8740.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>mpfs_local.h</Name>
+        <Path>Header Files/framework/system/fs/mpfs/src</Path>
+      </File>
+      <File>
+        <Name>rand.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>zero_conf_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>opensslconf.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>port.c</Name>
+        <Path>Source Files/FreeRTOS/portable/MPLAB/PIC32MZ</Path>
+      </File>
+      <File>
+        <Name>sniffer.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>ecc.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>crl.c</Name>
+        <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>sntp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>coding.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>drv_ethphy.h</Name>
+        <Path>Header Files/framework/driver/ethphy</Path>
+      </File>
+      <File>
+        <Name>wc_port.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>mpi_superclass.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>x509v3.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>sys_ports.h</Name>
+        <Path>Header Files/framework/system/ports</Path>
+      </File>
+      <File>
+        <Name>dnss.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>usb_device_mapping.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>error-crypt.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ecdh.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>asm.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>visibility.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>gfx_palette.h</Name>
+        <Path>Header Files/framework/gfx</Path>
+      </File>
+      <File>
+        <Name>rabbit.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>dhcpv6_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ftp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>md5.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>sha.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>oahash.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>hc128.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>ipv6_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sha256.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_random.c</Name>
+        <Path>Source Files/framework/system/random/src</Path>
+      </File>
+      <File>
+        <Name>camellia.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>semphr.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>tcpip_helper_c32.S</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>bn.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>asn_public.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>snmpv3.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>ge_low_mem.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>echoserver.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/examples/echoserver</Path>
+      </File>
+      <File>
+        <Name>chacha.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>err.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>dhcp.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_mac.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>helpers.c</Name>
+        <Path>Source Files/framework/tcpip/src/common</Path>
+      </File>
+      <File>
+        <Name>signature.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>tcpip_heap_alloc.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>tftpc_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>mpu_prototypes.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>portmacro.h</Name>
+        <Path>Header Files/FreeRTOS/portable/MPLAB/PIC32MZ</Path>
+      </File>
+      <File>
+        <Name>sha512.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>chacha20_poly1305.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>random.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>curve25519.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>tcpip_helpers_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_packet.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>crl.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>dh.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>arc4.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>smtpc.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>dnss_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_manager.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>tcpip_common_ports.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>ndp_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>snmp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>timers.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>io.c</Name>
+        <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>ec.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>task.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>dhcp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>ipv4.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>snmpv3_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>opensslconf.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>osal_impl_basic.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>udp_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>list.c</Name>
+        <Path>Source Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>osal.h</Name>
+        <Path>Header Files/framework/osal</Path>
+      </File>
+      <File>
+        <Name>usb_device_cdc.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>ec25519.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>test.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>dns_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>http_net_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ISR_Support.h</Name>
+        <Path>Header Files/FreeRTOS/portable/MPLAB/PIC32MZ</Path>
+      </File>
+      <File>
+        <Name>chacha.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>mpi_class.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>portable.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>dns.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>md2.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>error.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>iperf_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>visibility.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>internal.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl</Path>
+      </File>
+      <File>
+        <Name>sys_int_mapping.h</Name>
+        <Path>Header Files/framework/system/int</Path>
+      </File>
+      <File>
+        <Name>des3.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>logging.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_devcon.h</Name>
+        <Path>Header Files/framework/system/devcon</Path>
+      </File>
+      <File>
+        <Name>internal.c</Name>
+        <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>nbns.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>tcpip_packet.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sys_debug.h</Name>
+        <Path>Header Files/framework/system/debug</Path>
+      </File>
+      <File>
+        <Name>tls.c</Name>
+        <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_regs.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>icmpv6_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>misc.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ipv4.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>mpu_wrappers.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>peripheral.h</Name>
+        <Path>Header Files/framework/peripheral</Path>
+      </File>
+      <File>
+        <Name>queue.c</Name>
+        <Path>Source Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>ecc.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>options.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>tcp.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>logging.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>arp.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>md5.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>crypto.h</Name>
+        <Path>Header Files/framework/crypto</Path>
+      </File>
+      <File>
+        <Name>settings.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>snmp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>queue.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>settings.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>mpi_superclass.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>certs_test.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>chacha20_poly1305.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>sys_fs_media_manager.c</Name>
+        <Path>Source Files/framework/system/fs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>tcp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>drv_ethphy_local.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src</Path>
+      </File>
+      <File>
+        <Name>visibility.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ssl.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>dh.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>tfm.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>arp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>aes_ofb.h</Name>
+        <Path>Header Files/framework/tcpip/src/crypto</Path>
+      </File>
+      <File>
+        <Name>coding.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>coding.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>aes.h</Name>
+        <Path>Header Files/framework/tcpip/src/crypto</Path>
+      </File>
+      <File>
+        <Name>arc4.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>types.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>asn_public.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>types.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_compatibility.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
+        <Name>tcpip_notify.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ti-ccm.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/port/ti</Path>
+      </File>
+      <File>
+        <Name>rsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>pkcs12.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>dhcps_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>usb_device_cdc_local.h</Name>
+        <Path>Header Files/framework/usb/src</Path>
+      </File>
+      <File>
+        <Name>blake2.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>icmpv6.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>ipv6.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>telnet.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>certs_test.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>osal_freertos.h</Name>
+        <Path>Header Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>drv_usb.h</Name>
+        <Path>Header Files/framework/driver/usb</Path>
+      </File>
+      <File>
+        <Name>pkcs7.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>smtp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>pwdbased.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>stack.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>nbns.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>blake2b.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>ui.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>md4.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>berkeley_api.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>ed25519.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>link_list.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>pem.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>lldp_tlv.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_module_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>aes.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>osal_freertos.c</Name>
+        <Path>Source Files/framework/osal/src</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_dp83848.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>tcpip_manager.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sniffer_error.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>camellia.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>asn.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_heap_alloc.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>des3.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>arp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>rabbit.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>hash.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>dsa.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>sys_common.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>sys_buffer.h</Name>
+        <Path>Header Files/framework/system/common</Path>
+      </File>
+      <File>
+        <Name>udp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>compress.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>tcpip_helpers.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>arp_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sys_clk_mapping.h</Name>
+        <Path>Header Files/framework/system/clk</Path>
+      </File>
+      <File>
+        <Name>ed25519.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>pwdbased.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_ip101gr.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>poly1305.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>ssl.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>drv_nvm.h</Name>
+        <Path>Header Files/framework/driver/nvm</Path>
+      </File>
+      <File>
+        <Name>des.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>sha.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ripemd.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>coding.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>opensslv.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>sha.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>lhash.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>drv_tmr_local.h</Name>
+        <Path>Header Files/framework/driver/tmr/src</Path>
+      </File>
+      <File>
+        <Name>hmac.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>hmac.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>aes.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_fs_local.h</Name>
+        <Path>Header Files/framework/system/fs/src</Path>
+      </File>
+      <File>
+        <Name>dh.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs</Path>
+      </File>
+      <File>
+        <Name>mpi_class.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>opensslv.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>mpfs.c</Name>
+        <Path>Source Files/framework/system/fs</Path>
+      </File>
+      <File>
+        <Name>bio.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>usb_chapter_9.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>random.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>icmp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>fe_operations.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>x509v3.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>hmac.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_dp83640.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>icmp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>ed25519.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>idea.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>x509.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>ec25519.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>snmp_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ripemd.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>asn.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>udp_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>drv_ethphy.c</Name>
+        <Path>Source Files/framework/driver/ethphy</Path>
+      </File>
+      <File>
+        <Name>hc128.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>net_pres_transportapi.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
+        <Name>sys_random_local.h</Name>
+        <Path>Header Files/framework/system/random/src</Path>
+      </File>
+      <File>
+        <Name>ssl.c</Name>
+        <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>event_groups.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>tcpip_helpers.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>sys_random.h</Name>
+        <Path>Header Files/framework/system/random</Path>
+      </File>
+      <File>
+        <Name>sniffer_error.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>settings_comp.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>ti-hash.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/port/ti</Path>
+      </File>
+      <File>
+        <Name>asn1.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>ddns.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_smsc8740.c</Name>
+        <Path>Source Files/framework/driver/ethphy</Path>
+      </File>
+      <File>
+        <Name>tcpip_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>aes_ecb.h</Name>
+        <Path>Header Files/framework/tcpip/src/crypto</Path>
+      </File>
+      <File>
+        <Name>random.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>hc128.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>integer.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>memory.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>lldp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>driver_common.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
+        <Name>drv_extphy_smsc9303.h</Name>
+        <Path>Header Files/framework/driver/ethphy/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>des.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>sniffer.c</Name>
+        <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>croutine.c</Name>
+        <Path>Source Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>ssl.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>drv_ethmac.c</Name>
+        <Path>Source Files/framework/driver/ethmac</Path>
+      </File>
+      <File>
+        <Name>ddns_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ftp.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>memory.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>callbacks.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>drv_ethmac_lib.c</Name>
+        <Path>Source Files/framework/driver/ethmac</Path>
+      </File>
+      <File>
+        <Name>ecdsa.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>http_net.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>dh.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>ecc_fp.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>conf.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>ecc.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>dh.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>dns.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>aes_ctr.h</Name>
+        <Path>Header Files/framework/tcpip/src/crypto</Path>
+      </File>
+      <File>
+        <Name>md5.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sys_int_private.h</Name>
+        <Path>Header Files/framework/system/int/src</Path>
+      </File>
+      <File>
+        <Name>deprecated_definitions.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>sntp.c</Name>
+        <Path>Source Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>err.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>misc.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>iperf.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>tcpip_ethernet.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>net_pres_encryptionproviderapi.h</Name>
+        <Path>Header Files/framework/net/pres</Path>
+      </File>
+      <File>
+        <Name>mpi_superclass.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>pkcs7.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>error-ssl.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>zero_conf_link_local_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>compress.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>_eth_dcpt_lists.h</Name>
+        <Path>Header Files/framework/driver/ethmac/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>usb_billboard.h</Name>
+        <Path>Header Files/framework/usb</Path>
+      </File>
+      <File>
+        <Name>ripemd.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>memory.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_variant_mapping.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
+        <Name>ossl_typ.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/openssl</Path>
+      </File>
+      <File>
+        <Name>arc4.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>http_net_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>StackMacros.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>integer.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sha512.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>tfm.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>sha512.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>tftpc.h</Name>
+        <Path>Header Files/framework/tcpip</Path>
+      </File>
+      <File>
+        <Name>ftp_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>ge_operations.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>sniffer.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>integer.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>tcpip_reboot_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>croutine.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>random.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>engine.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>logging.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>nrf51.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/port</Path>
+      </File>
+      <File>
+        <Name>fips_test.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>version.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>options.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>dhcpv6_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>drv_ethmac_local.h</Name>
+        <Path>Header Files/framework/driver/ethmac/src</Path>
+      </File>
+      <File>
+        <Name>ssl.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>pkcs12.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_local.h</Name>
+        <Path>Header Files/framework/driver/usb/usbhs/src</Path>
+      </File>
+      <File>
+        <Name>pem.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>drv_usbhs_device.c</Name>
+        <Path>Source Files/framework/driver/usb/usbhs/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>FreeRTOS.h</Name>
+        <Path>Header Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>drv_nvm_erasewrite.c</Name>
+        <Path>Source Files/framework/driver/nvm/src/dynamic</Path>
+      </File>
+      <File>
+        <Name>internal.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl</Path>
+      </File>
+      <File>
+        <Name>curve25519.h</Name>
+        <Path>Header Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>fe_operations.c</Name>
+        <Path>Source Files/third_party/wolfssl/wolfcrypt</Path>
+      </File>
+      <File>
+        <Name>event_groups.c</Name>
+        <Path>Source Files/FreeRTOS</Path>
+      </File>
+      <File>
+        <Name>pwdbased.c</Name>
+        <Path>Source Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>keys.c</Name>
+        <Path>Source Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>asn_public.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>mpi_class.h</Name>
+        <Path>Header Files/framework/crypto/src</Path>
+      </File>
+      <File>
+        <Name>ed25519.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/openssl</Path>
+      </File>
+      <File>
+        <Name>ocsp.h</Name>
+        <Path>Header Files/third_party/wolfssl</Path>
+      </File>
+      <File>
+        <Name>http_private.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>telnet_manager.h</Name>
+        <Path>Header Files/framework/tcpip/src</Path>
+      </File>
+      <File>
+        <Name>memory.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/cyassl/ctaocrypt</Path>
+      </File>
+      <File>
+        <Name>misc.h</Name>
+        <Path>Header Files/third_party/tcpip/wolfssl/wolfssl/wolfcrypt</Path>
+      </File>
+    </Files>
+    <Templates>
+      <Template>
+        <Name>drv_cmp_static.h</Name>
+        <Path>Header Files/app/system_config/DM990004_IoT_Ethernet/framework/driver/cmp</Path>
+        <Checksum>FED6B0E080E26108C7326B955E14FCF9</Checksum>
+      </Template>
+      <Template>
+        <Name>rtos_hooks.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>FA52743264536E5207D2ADBE57B48D05</Checksum>
+      </Template>
+      <Template>
+        <Name>app1.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>app2.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>app2.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>config.h</Name>
+        <Path>Header Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>8C02EA670A0009B034FA607E6B623109</Checksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>E45A1BB27385D105DB39392C0F6ED8DA</Checksum>
+        <ProjectFileChecksum>FFCA228C8860F089C33DE5C3896A5873</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>app1.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet/framework/system/clk/src</Path>
+        <Checksum>6C07E4984368F52244D6790084A8ED66</Checksum>
+      </Template>
+      <Template>
+        <Name>system_exceptions.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>C111969CA43D6CEA1E9E33A6164E7AE0</Checksum>
+      </Template>
+      <Template>
+        <Name>system_definitions.h</Name>
+        <Path>Header Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>C126B201FFC923C3C2009B9C238C37ED</Checksum>
+      </Template>
+      <Template>
+        <Name>system_interrupt_a.S</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>F55E3DFEFB9F84DD2FCCD04738A5047E</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_adc_static.h</Name>
+        <Path>Header Files/app/system_config/DM990004_IoT_Ethernet/framework/driver/adc</Path>
+        <Checksum>35822A1C7F7D588E4A47E3C9DA156B47</Checksum>
+      </Template>
+      <Template>
+        <Name>main.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>drv_adc_static.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet/framework/driver/adc/src</Path>
+        <Checksum>19E452BFFF370FDB0E970DE6744D98B5</Checksum>
+      </Template>
+      <Template>
+        <Name>drv_cmp_static.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet/framework/driver/cmp/src</Path>
+        <Checksum>9229ECC9F56DA41F253FFDFDCE0A4FB8</Checksum>
+      </Template>
+      <Template>
+        <Name>FreeRTOSConfig.h</Name>
+        <Path>Header Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>8C07CB199C46A7CFEA0395BE7FD2B38F</Checksum>
+      </Template>
+      <Template>
+        <Name>net_pres_cert_store.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet/framework/net/pres</Path>
+        <Checksum>289429D111A99E1156D2E176B9D3D725</Checksum>
+        <ProjectFileChecksum>460637486EC7ECC173AD2B10F626F4E1</ProjectFileChecksum>
+      </Template>
+      <Template>
+        <Name>system_config.h</Name>
+        <Path>Header Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>A80EEEE7692D22FC6F31F4C11CF7BFD1</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_ports_static.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet/framework/system/ports/src</Path>
+        <Checksum>36873BF1F9E084EA4533621FDDE9BABC</Checksum>
+      </Template>
+      <Template>
+        <Name>app.c</Name>
+        <Path>Source Files/app</Path>
+      </Template>
+      <Template>
+        <Name>system_tasks.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>8D79C4E951D023C5505AE1B2D4EFB79D</Checksum>
+      </Template>
+      <Template>
+        <Name>system_init.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet</Path>
+        <Checksum>857A9AB947015B431BEC531390FF8D7F</Checksum>
+      </Template>
+      <Template>
+        <Name>sys_clk_static.h</Name>
+        <Path>Header Files/app/system_config/DM990004_IoT_Ethernet/framework/system/clk</Path>
+        <Checksum>B4BD59D8D7C4DA95DC5E3B57755FD352</Checksum>
+      </Template>
+      <Template>
+        <Name>app.h</Name>
+        <Path>Header Files/app</Path>
+      </Template>
+      <Template>
+        <Name>net_pres_enc_glue.h</Name>
+        <Path>Header Files/app/system_config/DM990004_IoT_Ethernet/framework/net/pres</Path>
+        <Checksum>00EB3E5CDEA6F53C5AF289FCE43B4ED2</Checksum>
+      </Template>
+      <Template>
+        <Name>net_pres_enc_glue.c</Name>
+        <Path>Source Files/app/system_config/DM990004_IoT_Ethernet/framework/net/pres</Path>
+        <Checksum>1E2631455852A4F9D1A62E2191F1426F</Checksum>
+        <ProjectFileChecksum>4DEB6FECEE80291190F8F3D5416C1661</ProjectFileChecksum>
+      </Template>
+    </Templates>
+    <CompilerItems>
+      <C32-AS>
+        <Include value="../../../../../../../microchip/harmony/v1_09/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
+        <Include value="../../../../../../../microchip/harmony/v1_09/third_party/rtos/FreeRTOS/Source/include"/>
+        <Include value="../src/system_config/DM990004_IoT_Ethernet"/>
+      </C32-AS>
+      <C32>
+        <Include value="/Users/c14227/Documents/git-projects/iot-00027--v2.0.0-firmware-and-application-development/software/aws-iot-ethernet/firmware/src"/>
+        <Include value="/Users/c14227/Documents/git-projects/iot-00027--v2.0.0-firmware-and-application-development/software/aws-iot-ethernet/firmware/src/system_config/DM990004_IoT_Ethernet"/>
+        <Include value="/Users/c14227/Documents/git-projects/iot-00027--v2.0.0-firmware-and-application-development/software/aws-iot-ethernet/firmware/src/DM990004_IoT_Ethernet"/>
+        <Include value="/Users/c14227/microchip/harmony/v1_09/framework"/>
+        <Include value="/Users/c14227/Documents/git-projects/iot-00027--v2.0.0-firmware-and-application-development/software/aws-iot-ethernet/firmware/src/system_config/DM990004_IoT_Ethernet/framework"/>
+        <Include value="../../../../../../../microchip/harmony/v1_09/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ"/>
+        <Include value="../../../../../../../microchip/harmony/v1_09/third_party/rtos/FreeRTOS/Source/include"/>
+        <Include value="../src/system_config/DM990004_IoT_Ethernet"/>
+        <Define value="HAVE_CONFIG_H"/>
+        <Include value="../../../../../../../microchip/harmony/v1_09/third_party/tcpip/wolfssl"/>
+      </C32>
+    </CompilerItems>
+    <Libraries>
+      <Library value="../../../../../../../microchip/harmony/v1_09/bin/framework/peripheral/PIC32MZ2048EFM064_peripherals.a"/>
+    </Libraries>
+  </Manifest>
+</configuration>

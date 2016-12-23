@@ -58,6 +58,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "parson.h"
 #include "bsp_config.h"
 #include "app_nvm_support.h"
+#include "app_insight_support.h"
 #include "wolfmqttsdk/wolfmqtt/mqtt_client.h"
 
 // *****************************************************************************
@@ -83,9 +84,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 APP_DATA appData;
 extern APP1_DATA app1Data;
-
-#define APP_HARDWARE  "iot_ethernet_dm990004"
-#define APP_FIRMWARE_VERSION "1.3.1"
+extern APP2_DATA app2Data;
 
 char topic_awsUpdate[128];
 char topic_awsUpdateDelta[128];
@@ -93,7 +92,11 @@ char topic_awsUpdateDelta[128];
 #define MQTT_DEFAULT_CMD_TIMEOUT_MS 10000
 #define MAX_BUFFER_SIZE 1024
 #define MAX_PACKET_ID 65536
+
+/* This is the keep alive time for the MQTT connection.
+   This value is also used for the PING request         */
 #define KEEP_ALIVE 900
+                        
 
 
 byte txBuffer[MAX_BUFFER_SIZE];
@@ -110,15 +113,16 @@ static int mPacketIdLast;
 // WolfMQTT Callbacks for network connectivity
 int APP_tcpipConnect_cb(void *context, const char* host, word16 port, int timeout_ms)
 {
-    uint32_t timeout = 0;
+    uint32_t timeout;
     timeout = SYS_TMR_TickCountGet();
-    SYS_CONSOLE_PRINT("App:  DNS:   Resolving host '%s'\r\n", &appData.host);
+    
     TCPIP_DNS_RESULT dnsResult;
     
-    dnsResult = TCPIP_DNS_Resolve((const char *)appData.host, TCPIP_DNS_TYPE_A);
+    appData.socket_connected = false;
+    
+    dnsResult = TCPIP_DNS_Resolve((char *)appData.host, TCPIP_DNS_TYPE_A);
     if(dnsResult < 0)
     {
-        SYS_CONSOLE_MESSAGE("App:  DNS:  Failed to begin\r\n");
         return APP_CODE_ERROR_FAILED_TO_BEGIN_DNS_RESOLUTION;
     }
 
@@ -131,26 +135,14 @@ int APP_tcpipConnect_cb(void *context, const char* host, word16 port, int timeou
     }
     if(dnsResult != (TCPIP_DNS_RES_OK))
     {
-        SYS_CONSOLE_PRINT("App:  DNS:  Resolution failed - Aborting\r\n");
         return APP_CODE_ERROR_DNS_FAILED;
     } 
-    else if(dnsResult == TCPIP_DNS_RES_OK)
-    {
-       SYS_CONSOLE_PRINT("App:  DNS:  Resolved IPv4 Address: %d.%d.%d.%d for host '%s'\r\n", 
-            appData.host_ipv4.v4Add.v[0],appData.host_ipv4.v4Add.v[1],appData.host_ipv4.v4Add.v[2],
-            appData.host_ipv4.v4Add.v[3],appData.host);
-    }  
-    SYS_CONSOLE_PRINT("App:  TCPIP:  Opening socket to '%d.%d.%d.%d:%d'\r\n", 
-        appData.host_ipv4.v4Add.v[0], appData.host_ipv4.v4Add.v[1], appData.host_ipv4.v4Add.v[2],
-        appData.host_ipv4.v4Add.v[3], appData.port);
     
-    uint32_t timeSocketbefore = SYS_TMR_TickCountGet();
     appData.socket = NET_PRES_SocketOpen(0, NET_PRES_SKT_ENCRYPTED_STREAM_CLIENT, IP_ADDRESS_TYPE_IPV4, (NET_PRES_SKT_PORT_T)port, (NET_PRES_ADDRESS *)&appData.host_ipv4, (NET_PRES_SKT_ERROR_T*)&appData.error);
     NET_PRES_SocketWasReset(appData.socket);
     
     if(appData.socket == INVALID_SOCKET)
     {
-        SYS_CONSOLE_MESSAGE("App:  TCPIP:  Invalid socket error\r\n");
         NET_PRES_SocketClose(appData.socket);
         return APP_CODE_ERROR_INVALID_SOCKET;
     }
@@ -172,13 +164,11 @@ int APP_tcpipConnect_cb(void *context, const char* host, word16 port, int timeou
         
     if (!NET_PRES_SKT_IsSecure(appData.socket))
     {
-        SYS_CONSOLE_MESSAGE("App:  TCPIP:  SSL failed to negotiate\r\n");
         NET_PRES_SocketClose(appData.socket);
         return APP_CODE_ERROR_FAILED_SSL_NEGOTIATION;
     }
-    uint32_t timeSocketafter = SYS_TMR_TickCountGet();
-    SYS_CONSOLE_PRINT("App:  Socket Opened - Time to open %d ticks\r\n", timeSocketafter-timeSocketbefore);
-    
+    appData.socket_connected = true;
+    APP_DebugMessage(DEBUG_SOCKET_CHANGE);
     return 0; //Success
 }
 
@@ -233,6 +223,7 @@ int APP_tcpipRead_cb(void *context, byte* buf, int buf_len, int timeout_ms)
 int APP_tcpipDisconnect_cb(void *context)
 {
     int ret = 0;
+    appData.socket_connected = false;
     NET_PRES_SKT_Close(appData.socket);
     appData.state = APP_TCPIP_MQTT_NET_CONNECT;
     return ret;
@@ -268,7 +259,6 @@ int mqttclient_message_cb(MqttClient *client, MqttMessage *msg, byte msg_new, by
     char payload[MAX_BUFFER_SIZE];
     memcpy(payload, msg->buffer, msg->total_len);
     payload[msg->total_len] = '\0';
-    SYS_CONSOLE_PRINT("\r\nApp:  MQTT.Message Received: %s -- Topic %*.*s\r\n\r\n", payload, msg->topic_name_len, msg->topic_name_len, msg->topic_name);
     
     appData.lightShowVal = BSP_LED_RX;
     xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);
@@ -380,11 +370,9 @@ int mqttclient_message_cb(MqttClient *client, MqttMessage *msg, byte msg_new, by
         publish.packet_id = mqttclient_get_packetid();
         publish.buffer = (byte *)reportedPayload;
         publish.total_len = strlen((char *)publish.buffer);
-        rc = MqttClient_Publish(&appData.myClient, &publish);
-        SYS_CONSOLE_PRINT("App:  MQTT.Publish: Topic %s, %s (%d)\r\n    Payload:  %s\r\n",
-            publish.topic_name, MqttClient_ReturnCodeToString(rc), rc, publish.buffer);
+        rc = MqttClient_Publish(&appData.myClient, &publish);  
         if (rc != MQTT_CODE_SUCCESS) {
-            while(1);
+            appData.state = APP_FATAL_ERROR;
         }
         appData.lightShowVal = BSP_LED_TX;
         xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);
@@ -434,34 +422,43 @@ bool APP_TIMER_Set(uint32_t * timer)
     return true;
 }
 
-const char* APP_ReturnCodeToString(int return_code)
+void APP_DebugMessage(int DebugMessage)
 {
-    switch(return_code)
-    {
-        case APP_CODE_SUCCESS:
-            return "Success";
-        case APP_CODE_ERROR_BAD_ARG:
-            return "Error (Bad argument)";
-        case APP_CODE_ERROR_OUT_OF_BUFFER:
-            return "Error (Out of buffer)";
-        case APP_CODE_ERROR_SSL_FATAL:
-            return "Error (SSL Fatal)";
-        case APP_CODE_ERROR_INVALID_SOCKET:
-            return "Error (Invalid Socket)";
-        case APP_CODE_ERROR_FAILED_TO_BEGIN_DNS_RESOLUTION:
-            return "Error (Failed to Begin DNS)";
-        case APP_CODE_ERROR_DNS_FAILED:
-            return "Error (DNS Failed)";
-        case APP_CODE_ERROR_FAILED_SSL_NEGOTIATION:
-            return "Error (Failed SSL Negotiation)";
-        case APP_CODE_ERROR_TIMEOUT:
-            return "Error (Timeout)";
-        case APP_CODE_ERROR_CMD_TIMEOUT:
-            return "Error (Command Timeout)";
-    }
-    return "Unknown";
+    if(appData.debugSet)
+        xQueueSendToFront(app2Data.debugQueue, &DebugMessage, 1);
 }
 
+/********************************************************
+ * NVM Driver Events handler
+ ********************************************************/
+
+void APP_EventHandler
+(
+    DRV_NVM_EVENT event,
+    DRV_NVM_COMMAND_HANDLE commandHandle,
+    uintptr_t context
+)
+{
+    switch (event)
+    {
+        case DRV_NVM_EVENT_COMMAND_COMPLETE:
+            {
+                appData.eventCount++;
+                break;
+            }
+
+        case DRV_NVM_EVENT_COMMAND_ERROR:
+            {
+                appData.errorEventCount++;
+                break;
+            }
+
+        default:
+            {
+                break;
+            }
+    }
+}
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -481,7 +478,10 @@ void APP_Initialize ( void )
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
     memset(appData.host, '\0', sizeof(appData.host));
+    sprintf(appData.macAddress, "Null");
     appData.port = AWS_IOT_PORT;
+    appData.isCommissioned = false;
+    appData.writeToNVM = false;
     
     // Initialize MQTT net callbacks
     appData.myNet.connect = APP_tcpipConnect_cb;
@@ -499,6 +499,13 @@ void APP_Initialize ( void )
     appData.led2val = false;
     appData.led3val = false;
     appData.led4val = false;
+    
+    appData.socket_connected = false;
+    appData.mqtt_connected = false;
+    appData.debugSet = false;
+    
+    appData.eventCount = 0;
+    appData.errorEventCount = 0;
 }
 
 
@@ -512,7 +519,6 @@ void APP_Initialize ( void )
 
 void APP_Tasks ( void )
 {   
-    static int validConfig = 0;
     
     /* Check the application's current state. */
     switch ( appData.state )
@@ -520,37 +526,32 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
+            appData.nvmHandle = DRV_NVM_Open(0, DRV_IO_INTENT_READWRITE);
+            if(DRV_HANDLE_INVALID == appData.nvmHandle)
+            {
+                appData.state = APP_FATAL_ERROR;
+                break;
+            }
+            
+            /* Register for NVM driver events */
+            DRV_NVM_EventHandlerSet (appData.nvmHandle, APP_EventHandler, 1);
+            
+            appData.gAppNVMMediaGeometry = DRV_NVM_GeometryGet(appData.nvmHandle);
+            if(NULL == appData. gAppNVMMediaGeometry){
+                appData.state = APP_FATAL_ERROR;
+                break;
+            }  
+            
             bool appInitialized = true;
+            
             if (appInitialized)
             {
-                SYS_CONSOLE_MESSAGE("App:  Initialized\r\n");
-                appData.state = APP_NVM_MOUNT_DISK;
+                appData.state = APP_NVM_ERASE_CONFIGURATION;
             }
             break;
         }
 
-        // Mount the file system where the webpages are loaded
-        case APP_NVM_MOUNT_DISK:
-        {
-            if(SYS_FS_Mount(SYS_FS_NVM_VOL, LOCAL_WEBSITE_PATH_FS, MPFS2, 0, NULL) == 0)
-            {
-                SYS_CONSOLE_PRINT("App:  The %s File System is mounted.\r\n", SYS_FS_MPFS_STRING);
-                appData.state = APP_NVM_ERASE_CONFIGURATION;
-            }
-            else
-            {   // Timeout 5 seconds
-                if(APP_TIMER_Expired(&appData.genericUseTimer, 5))
-                {
-                    SYS_CONSOLE_PRINT("App:  The %s File System failed to mount.  Critical Error, reset board\r\n", SYS_FS_MPFS_STRING);
-                    appData.lightShowVal = BSP_LED_NVM_FAILED_MOUNT;
-                    xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);  
-                    while(1);
-                }
-            }
-            break;
-        }    
-        
-        // If user presses switch 2 and 3 on power up, the configuration will be erased
+        // If user presses switch 2 and 3 on power up, the configuration will be erased manually
         case APP_NVM_ERASE_CONFIGURATION:
         {
             if((BSP_SWITCH_StateGet(BSP_SWITCH_3_CHANNEL, BSP_SWITCH_3_PORT) == BSP_SWITCH_STATE_ASSERTED) 
@@ -560,9 +561,6 @@ void APP_Tasks ( void )
                 APP_NVM_Write(NVM_HOST_ADDRESS_SPACE, appData.host);
                 APP_NVM_Erase(NVM_CLIENT_CERTIFICATE_SPACE);
                 APP_NVM_Erase(NVM_CLIENT_KEY_SPACE);
-                SYS_CONSOLE_MESSAGE("***************************************\r\n"
-                                    "App:  Erasing configuration!\r\n"
-                                    "***************************************\r\n");
                 appData.state = APP_TCPIP_WAIT_INIT;
                 break;
             }
@@ -573,19 +571,22 @@ void APP_Tasks ( void )
         // Load the configuration stored in NVM on powerup
         case APP_NVM_LOAD_CONFIGURATION:
         {
-            SYS_CONSOLE_MESSAGE("App:  Loading AWS IoT Endpoint Address and AWS Certificate/Certificate Private Key\r\n");
             APP_NVM_Read(NVM_HOST_ADDRESS_SPACE, appData.host, sizeof(appData.host));
             APP_NVM_Read(NVM_CLIENT_CERTIFICATE_SPACE, appData.clientCert, sizeof(appData.clientCert));
             APP_NVM_Read(NVM_CLIENT_KEY_SPACE, appData.clientKey, sizeof(appData.clientKey));
-            if(appData.host[0] != '\0')
-            {   // Set this flag so we know we loaded a valid config from NVM
-                validConfig = 1;
+            if(appData.host[0] != '\0' && appData.host[0] != 0xff)
+            {   // Set this flag so we know we loaded a valid configuration from NVM
+                appData.isCommissioned = true;
+            }
+            else
+            {   // This means we have no endpoint, so lets set the string for debugging purposes
+                sprintf((char *)appData.host, "No Endpoint");
             }
             appData.state = APP_TCPIP_WAIT_INIT;
             break;
         }
         
-        // Wait for the TCPIP stack to initialize, store the boards MAC address and initialize mDNS service
+        // Wait for the TCPIP stack to initialize and store MAC address
         case APP_TCPIP_WAIT_INIT:
         {
             SYS_STATUS          tcpipStat;
@@ -608,50 +609,71 @@ void APP_Tasks ( void )
                     TCPIP_STACK_NetNameGet(netH);
                     TCPIP_STACK_NetBIOSName(netH);
              
-                    // Retrieve MAC Address for UUID
+                    // Retrieve MAC Address to store and convert to string
                     TCPIP_NET_HANDLE netH = TCPIP_STACK_NetHandleGet("PIC32INT");
                     TCPIP_MAC_ADDR* pAdd = 0;
                     pAdd = (TCPIP_MAC_ADDR *)TCPIP_STACK_NetAddressMac(netH);
-                    
-                    // Store UUID for application
-                    appData.macAddress.v[5] = pAdd->v[5];
-                    appData.macAddress.v[4] = pAdd->v[4];
-                    appData.macAddress.v[3] = pAdd->v[3];
-                    appData.macAddress.v[2] = pAdd->v[2];
-                    appData.macAddress.v[1] = pAdd->v[1];
-                    appData.macAddress.v[0] = pAdd->v[0];
-                    
-                    // Convert to string
-                    sprintf(appData.uuid, "%02x%02x%02x%02x%02x%02x",
-                            appData.macAddress.v[0], appData.macAddress.v[1], appData.macAddress.v[2],
-                            appData.macAddress.v[3], appData.macAddress.v[4], appData.macAddress.v[5]); 
-                    
-                    char mDNSServiceName[16]; // base name of the service Must not exceed 16 bytes long
-                    strcpy(mDNSServiceName, &appData.uuid[6]); //Copy over UUID last 6 characters, 
-                    strcat(mDNSServiceName, "_IoT-E");
-                    SYS_CONSOLE_PRINT("App:  Registering mDNS service as '%s'\r\n", mDNSServiceName);
-                    // mDNS name will be xxxxxx_IoT-E where "xxxxxx" is the last three bytes of MAC address
-                    mDNSServiceName[sizeof(mDNSServiceName) - 2] = '1' + i;
-                    TCPIP_MDNS_ServiceRegister( netH
-                            , mDNSServiceName                     // name of the service
-                            ,"_http._tcp.local"                   // type of the service
-                            ,80                                   // TCP or UDP port, at which this service is available
-                            ,((const uint8_t *)"path=/index.htm") // TXT info
-                            ,1                                    // auto rename the service when if needed
-                            ,NULL                                 // no callback function
-                            ,NULL);      
+                    sprintf(appData.macAddress, "%02x%02x%02x%02x%02x%02x",
+                            pAdd->v[0], pAdd->v[1], pAdd->v[2],
+                            pAdd->v[3], pAdd->v[4], pAdd->v[5]); 
                 }
                 
-                // Here we build our Update and Delta topic strings using the boards unique MAC address
-                sprintf(topic_awsUpdateDelta, "$aws/things/%02x%02x%02x%02x%02x%02x/shadow/update/delta", 
-                    appData.macAddress.v[0], appData.macAddress.v[1], appData.macAddress.v[2],
-                    appData.macAddress.v[3], appData.macAddress.v[4], appData.macAddress.v[5]);
-                sprintf(topic_awsUpdate, "$aws/things/%02x%02x%02x%02x%02x%02x/shadow/update", 
-                    appData.macAddress.v[0], appData.macAddress.v[1], appData.macAddress.v[2],
-                    appData.macAddress.v[3], appData.macAddress.v[4], appData.macAddress.v[5]);
+                // Here we build our Update and Delta topic strings using the boards MAC address
+                sprintf(topic_awsUpdateDelta, "$aws/things/%s/shadow/update/delta", appData.macAddress);
+                sprintf(topic_awsUpdate, "$aws/things/%s/shadow/update", appData.macAddress);
                 APP_TIMER_Set(&appData.genericUseTimer);
-                appData.state = APP_TCPIP_WAIT_FOR_IP;
+                appData.state = APP_TCPIP_WAIT_CONFIGURATION;
             }
+            break;
+        }
+        
+        case APP_TCPIP_WAIT_CONFIGURATION:
+        {
+            // Check to see if we are commissioned
+            if(appData.isCommissioned != true)
+            {    
+                break;
+            }
+            else
+            {   // If appData.isCommissioned flag is set, then we know the config came from reading NVM so we can skip this step
+                if(appData.writeToNVM == true)
+                {   
+                    /* Clear the event counts */
+                    appData.eventCount = 0;
+                    appData.errorEventCount = 0;
+                
+                    //Queue NVM writes
+                    APP_NVM_Write(NVM_HOST_ADDRESS_SPACE, appData.host);
+                    APP_NVM_Write(NVM_CLIENT_CERTIFICATE_SPACE, appData.clientCert);
+                    APP_NVM_Write(NVM_CLIENT_KEY_SPACE, appData.clientKey);
+                    appData.state = APP_NVM_WRITE_CONFIGURATION;
+                } 
+                else
+                {
+                    appData.state = APP_TCPIP_WAIT_FOR_IP;
+                }
+                appData.lightShowVal = BSP_LED_INTIAL_CONNECT;
+                xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);  
+            }
+            break;
+        } 
+        
+        case APP_NVM_WRITE_CONFIGURATION:
+        {
+            if(appData.eventCount == 3)
+            {
+                APP_DebugMessage(DEBUG_NVM_WRITE_SUCCESS);                    
+            } 
+            else if (appData.errorEventCount > 0)
+            {
+                APP_DebugMessage(DEBUG_NVM_WRITE_FAILED);
+                appData.state = APP_FATAL_ERROR;
+            }
+            else
+            {
+                break;
+            }
+            appData.state = APP_TCPIP_WAIT_FOR_IP;
             break;
         }
 
@@ -661,10 +683,12 @@ void APP_Tasks ( void )
             TCPIP_NET_HANDLE    netH;
             int i, nNets;
             
-            if(APP_TIMER_Expired(&appData.genericUseTimer, 5))
+            if(APP_TIMER_Expired(&appData.genericUseTimer, 10))
             {
-                SYS_CONSOLE_MESSAGE("App:  Not getting IP Addr, check connections.  Retrying...\r\n");
+                APP_DebugMessage(DEBUG_NO_IP_ADDRESS);
                 APP_TIMER_Set(&appData.genericUseTimer);
+                uint32_t lightShowVal = BSP_LED_SERVER_CONNECT_FAILED;
+                xQueueSendToFront(app1Data.lightShowQueue, &lightShowVal, 1);
             }
                 
             nNets = TCPIP_STACK_NumberOfNetworksGet();
@@ -678,74 +702,22 @@ void APP_Tasks ( void )
                     {
                         uint32_t lightShowVal = BSP_LED_EASY_CONFIGURATION;
                         xQueueSendToFront(app1Data.lightShowQueue, &lightShowVal, 1);
-                        SYS_CONSOLE_PRINT("App:  Board online.  mDNS online. IP addr %d.%d.%d.%d online.  All systems nominal.\r\n",
-                        ipAddr.v[0],ipAddr.v[1],ipAddr.v[2],ipAddr.v[3]);
-                        SYS_CONSOLE_PRINT("App:  AWS Thing Name (MAC Address) '%s'\r\n", appData.uuid);
-                        SYS_CONSOLE_MESSAGE("App:  Waiting for configuration...\r\n");
-                        appData.state = APP_TCPIP_WAIT_CONFIGURATION;
+                        appData.board_ipAddr.v4Add.Val = ipAddr.Val;
+                        APP_DebugMessage(DEBUG_GOT_IP_ADDRESS);
+                        appData.state = APP_TCPIP_MQTT_INIT;
                     }
                 }
             }
             break;
         }
         
-        case APP_TCPIP_WAIT_CONFIGURATION:
-        {
-            // We check if "host" is null, if it has a value, we assume we have a configuration
-            if(appData.host[0] == '\0')
-            {    
-                break;
-            }
-            else
-            {   // If validConfig flag is set, then we know the config came from reading NVM so we can skip this step
-                if(validConfig == 0)
-                {    
-                    SYS_CONSOLE_MESSAGE("App:  Received configuration from webpage, writing to NVM...\r\n");
-                    if(APP_NVM_Write(NVM_HOST_ADDRESS_SPACE, appData.host) &&
-                        APP_NVM_Write(NVM_CLIENT_CERTIFICATE_SPACE, appData.clientCert) &&
-                        APP_NVM_Write(NVM_CLIENT_KEY_SPACE, appData.clientKey))
-                    {
-                        SYS_CONSOLE_MESSAGE("App:  Writing configuration to NVM - success\r\n");
-                    } 
-                    else
-                    {
-                        SYS_CONSOLE_MESSAGE("App:  Writing configuration to NVM - failed\r\n");
-                        while(1);
-                    }
-                    SYS_CONSOLE_PRINT("App:  Configured AWS IoT Endpoint Address '%s'\r\n", appData.host);
-                } 
-                else if(validConfig)
-                {
-                    SYS_CONSOLE_PRINT("App:  Found configuration - AWS IoT Endpoint Address '%s'\r\n", appData.host);
-                }
-                appData.lightShowVal = BSP_LED_INTIAL_CONNECT;
-                xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);  
-                TCPIP_NET_HANDLE    netH;
-                int i, nNets;
-
-                //Disable ZeroConf and HTTP server since we have server
-                nNets = TCPIP_STACK_NumberOfNetworksGet();
-                for (i = 0; i < nNets; i++)
-                {
-                    netH = TCPIP_STACK_IndexToNet(i);
-                    TCPIP_ZCLL_Disable(netH);
-                }
-            }
-            appData.state = APP_TCPIP_MQTT_INIT;
-            break;
-        }
-        
-
-                
         case APP_TCPIP_MQTT_INIT:
         {
-            SYS_CONSOLE_MESSAGE("App:  Beginning MQTT Client application\r\n");
             int rc = MqttClient_Init(&appData.myClient, &appData.myNet, mqttclient_message_cb, txBuffer, MAX_BUFFER_SIZE, rxBuffer, MAX_BUFFER_SIZE, MQTT_DEFAULT_CMD_TIMEOUT_MS);
-            SYS_CONSOLE_PRINT("App:  MQTT.Client_Init: %s (%d)\r\n", MqttClient_ReturnCodeToString(rc), rc);
             if(rc != MQTT_CODE_SUCCESS)
             {
-                SYS_CONSOLE_MESSAGE("App:  MQTT.Client_Init: Failed (catastrophic)\r\n");
-                while(1);
+                appData.state = APP_FATAL_ERROR;
+                break;
             }
             APP_TIMER_Set(&appData.genericUseTimer);
             appData.state = APP_TCPIP_MQTT_NET_CONNECT;
@@ -754,13 +726,10 @@ void APP_Tasks ( void )
         
         case APP_TCPIP_MQTT_NET_CONNECT:
         {
-            SYS_CONSOLE_MESSAGE("App:  MQTT.Net_Connect\r\n");
             int rc = MqttClient_NetConnect(&appData.myClient, (const char *)&appData.host, AWS_IOT_PORT, MQTT_DEFAULT_CMD_TIMEOUT_MS, NULL, NULL);
-            SYS_CONSOLE_PRINT("App:  MQTT.Net_Connect: %s (%d)\r\n", MqttClient_ReturnCodeToString(rc), rc);
             if(rc != MQTT_CODE_SUCCESS)
-            {
-                SYS_CONSOLE_PRINT("App:  %s (%d)\r\n", APP_ReturnCodeToString(rc), rc);
-                SYS_CONSOLE_PRINT("App:  Closing Socket %d\r\n\r\n", appData.socket);
+            {   
+                appData.socket_connected = appData.mqtt_connected = false;
                 NET_PRES_SocketClose(appData.socket);
                 appData.lightShowVal = BSP_LED_SERVER_CONNECT_FAILED;
                 xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);  
@@ -781,31 +750,23 @@ void APP_Tasks ( void )
             XMEMSET(&connect, 0, sizeof(MqttConnect));
             connect.keep_alive_sec = KEEP_ALIVE;
             connect.clean_session = 1;
-            char clientIdString[13];
-            sprintf(clientIdString, appData.uuid, "%02x%02x%02x%02x%02x%02x\0", 
-                    appData.macAddress.v[0], appData.macAddress.v[1], appData.macAddress.v[2],
-                    appData.macAddress.v[3], appData.macAddress.v[4], appData.macAddress.v[5]);
-            connect.client_id = clientIdString;
+            connect.client_id = appData.macAddress;
             XMEMSET(&lwt_msg, 0, sizeof(lwt_msg));
             connect.lwt_msg = &lwt_msg;
             connect.enable_lwt = 0;
             
             /* Send Connect and wait for Connect Ack */
             int rc = MqttClient_Connect(&appData.myClient, &connect);
-            SYS_CONSOLE_PRINT("App:  MQTT.Client_Connect: %s (%d)\r\n", MqttClient_ReturnCodeToString(rc), rc);
             if(rc != MQTT_CODE_SUCCESS)
             {
-                SYS_CONSOLE_MESSAGE("App:  MQTT.Client_Connect: failed\r\n");
+                
                 APP_TIMER_Set(&appData.genericUseTimer);
                 while(!APP_TIMER_Expired(&appData.genericUseTimer, 5));   
                 appData.state = APP_TCPIP_ERROR;
                 break;
             }
-                /* Validate Connect Ack info */
-            SYS_CONSOLE_PRINT("App:  MQTT.Connect Ack: Return Code %u, Session Present %d, keep alive: %d\r\n",
-            connect.ack.return_code,
-            (connect.ack.flags & MQTT_CONNECT_ACK_FLAG_SESSION_PRESENT) ?
-                1 : 0, connect.keep_alive_sec);
+            appData.mqtt_connected = true;
+            APP_DebugMessage(DEBUG_MQTT_CHANGE);
             APP_TIMER_Set(&appData.mqttKeepAlive);
             appData.state = APP_TCPIP_MQTT_SUBSCRIBE;
             break;
@@ -814,9 +775,9 @@ void APP_Tasks ( void )
         case APP_TCPIP_MQTT_SUBSCRIBE:
         {
             MqttSubscribe subscribe;
-            MqttTopic topics[1], *topic;
+            MqttTopic topics[1];
             MqttPublish publish;
-            int i, rc;
+            int rc;
 
             /* Build list of topics */
             topics[0].topic_filter = topic_awsUpdateDelta;
@@ -827,23 +788,15 @@ void APP_Tasks ( void )
             subscribe.packet_id = mqttclient_get_packetid();
             subscribe.topic_count = sizeof(topics)/sizeof(MqttTopic);
             subscribe.topics = topics;
+            
             rc = MqttClient_Subscribe(&appData.myClient, &subscribe);
-            SYS_CONSOLE_PRINT("App:  MQTT.Subscribe: %s (%d)\r\n",
-            MqttClient_ReturnCodeToString(rc), rc);
             if(rc != MQTT_CODE_SUCCESS)
             {
-                SYS_CONSOLE_MESSAGE("App:  MQTT.Subscribe: failed\r\n");
                 APP_TIMER_Set(&appData.genericUseTimer);
                 while(!APP_TIMER_Expired(&appData.genericUseTimer, 5));   
                 appData.state = APP_TCPIP_ERROR;
                 break;
             }
-            for (i = 0; i < subscribe.topic_count; i++)
-            {
-                topic = &subscribe.topics[i];
-                SYS_CONSOLE_PRINT("App:  MQTT.Topic List: %s, Qos %u, Return Code %u\r\n",
-                    topic->topic_filter, topic->qos, topic->return_code);
-            }  
 
             /* Publish Topic */
             XMEMSET(&publish, 0, sizeof(MqttPublish));
@@ -862,11 +815,9 @@ void APP_Tasks ( void )
             appData.led4val ? BSP_LEDOn(BSP_LED_4_CHANNEL, BSP_LED_4_PORT) : BSP_LEDOff(BSP_LED_4_CHANNEL, BSP_LED_4_PORT);  
             publish.total_len = strlen((char *)publish.buffer);
             rc = MqttClient_Publish(&appData.myClient, &publish);
-            SYS_CONSOLE_PRINT("App:  MQTT.Publish: Topic %s, %s (%d)\r\n    Payload: %s\r\n",
-                publish.topic_name, MqttClient_ReturnCodeToString(rc), rc, publish.buffer);
+            
             if(rc != MQTT_CODE_SUCCESS)
-            {
-                SYS_CONSOLE_MESSAGE("App:  MQTT.Publish: failed\r\n");   
+            { 
                 appData.state = APP_TCPIP_ERROR;
                 break;
             }
@@ -885,15 +836,11 @@ void APP_Tasks ( void )
                 APP_TIMER_Set(&appData.mqttKeepAlive);
                 if (rc != MQTT_CODE_SUCCESS)
                 {  
-                    SYS_CONSOLE_PRINT("App:  MQTT.Ping:  Keep Alive Error: %s (%d)\r\n",
-                    MqttClient_ReturnCodeToString(rc), rc);
                     appData.state = APP_TCPIP_ERROR;
                     break;
                 } 
                 else
                 {
-                    SYS_CONSOLE_PRINT("App:  MQTT.Ping: %s (%d)\r\n",
-                        MqttClient_ReturnCodeToString(rc), rc);
                     appData.lightShowVal = BSP_LED_TX;
                     xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);
                 }
@@ -908,16 +855,12 @@ void APP_Tasks ( void )
                 rc = MqttClient_Ping(&appData.myClient);
                 if (rc != MQTT_CODE_SUCCESS)
                 {
-                    SYS_CONSOLE_PRINT("App:  MQTT.Ping:  Keep Alive Error: %s (%d)\r\n",
-                        MqttClient_ReturnCodeToString(rc), rc);
                     appData.state = APP_TCPIP_ERROR;
                     break;
                 } 
             }
             else if (rc == MQTT_CODE_ERROR_NETWORK)
             {
-                SYS_CONSOLE_PRINT("App:  MQTT.WaitMessage:  Network Error: %s (%d)\r\n",
-                MqttClient_ReturnCodeToString(rc), rc);
                 appData.state = APP_TCPIP_ERROR;
                 break;
             }
@@ -973,11 +916,8 @@ void APP_Tasks ( void )
                     publish.buffer = (byte *)reportedPayload;
                     publish.total_len = strlen((char *)publish.buffer);
                     rc = MqttClient_Publish(&appData.myClient, &publish);
-                    SYS_CONSOLE_PRINT("App:  MQTT.Publish: Topic %s, %s (%d)\r\n    Payload: %s\r\n",
-                        publish.topic_name, MqttClient_ReturnCodeToString(rc), rc, publish.buffer);
                     if (rc != MQTT_CODE_SUCCESS)
                     {
-                        SYS_CONSOLE_MESSAGE("App:  MQTT.Publish: failed, closing socket and reconnecting\r\n\r\n");
                         appData.state = APP_TCPIP_ERROR;
                     }
                     appData.lightShowVal = BSP_LED_TX;
@@ -993,7 +933,6 @@ void APP_Tasks ( void )
             {
                 appData.lightShowVal = BSP_LED_SERVER_CONNECT_FAILED;
                 xQueueSendToFront(app1Data.lightShowQueue, &appData.lightShowVal, 1);  
-                SYS_CONSOLE_PRINT("App: MQTT.WaitMessage:  Error: %s (%d)\r\n", MqttClient_ReturnCodeToString(rc), rc);
                 appData.state = APP_TCPIP_ERROR;
             }
             break;
@@ -1001,16 +940,25 @@ void APP_Tasks ( void )
         
         case APP_TCPIP_ERROR:
         {
-            SYS_CONSOLE_PRINT("App: Closing Socket %d\r\n\r\n", appData.socket);
             NET_PRES_SocketClose(appData.socket);
+            appData.socket_connected = false;
+            appData.mqtt_connected = false;
+            APP_DebugMessage(DEBUG_ERROR_CLOSING_SOCKET);
             appData.state = APP_TCPIP_MQTT_NET_CONNECT;
+            break;
+        }
+        
+        /* This error requires system reset or hardware debugging */
+        case APP_FATAL_ERROR:
+        {
+            APP_DebugMessage(DEBUG_FATAL_ERROR);
             break;
         }
         
         /* The default state should never be executed. */
         default:
         {
-            /* TODO: Handle error in application's state machine. */
+            APP_DebugMessage(DEBUG_FATAL_ERROR);
             break;
         }
     }
